@@ -1,13 +1,22 @@
 "use client"
 
 import { useMenuContext } from "@/app/(context)/MenuBtnContext";
+import { useEffect, useState } from "react";
 
 interface MenuBtnProps {
   size:"Small"|"Medium"|"Large",
 }
 
 export default function MenuBtn({size}:MenuBtnProps) {
-  const {changeMenuStatus} = useMenuContext();
+  const {isMenuOpen,changeMenuStatus} = useMenuContext();
+  const [hbgDisp,setHbgDisp] = useState<boolean>(true); 
+  useEffect(()=>{
+    if(!isMenuOpen){
+      setHbgDisp(true);
+    }else{
+      setHbgDisp(false);
+    }
+  },[isMenuOpen,changeMenuStatus])
   const hbgBtnHandler = () => {
     changeMenuStatus(true);
   }
@@ -59,12 +68,7 @@ export default function MenuBtn({size}:MenuBtnProps) {
 
   return (
     <>
-      {/* Large */}
-      {getMenuBtn(size)}
-
-      {/* Medium */}
-      {/* Small */}
-
+      {hbgDisp && getMenuBtn(size)}
    </>
   );
 }
