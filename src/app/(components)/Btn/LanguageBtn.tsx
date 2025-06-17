@@ -8,7 +8,7 @@ export default function LanguageBtn() {
   const [language,setLanguage] = useState("English");
 
   const langBtnHandler = () => {
-    language==="English" ? (setLanguage("Japanese")):(setLanguage("English"))
+    setLanguage(language==="English" ? ("Japanese"):("English"))
   }
   
   return (
@@ -22,7 +22,7 @@ export default function LanguageBtn() {
           width={155}
           height={52}
         />
-        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-25%] text-xl text-gray-600">{language}</p>
+        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-xl text-gray-600">{language}</p>
       </div>
 
       {/* Middle */}
@@ -34,7 +34,7 @@ export default function LanguageBtn() {
           width={120}
           height={41}
         />
-        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-25%] text-gray-600">{language}</p>
+        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-gray-600">{language}</p>
       </div>
 
       {/* Small */}
@@ -46,7 +46,7 @@ export default function LanguageBtn() {
           width={85}
           height={30}
         />
-        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-25%] text-[12px] text-gray-600">{language}</p>
+        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-[12px] text-gray-600">{language}</p>
       </div>
     </>
   );
