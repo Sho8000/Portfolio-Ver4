@@ -1,13 +1,9 @@
 "use client"
-
+import Styles from "./BTN.module.css"
 import { useMenuContext } from "@/app/(context)/MenuBtnContext";
 import { useEffect, useState } from "react";
 
-interface MenuBtnProps {
-  size:"Small"|"Medium"|"Large",
-}
-
-export default function MenuBtn({size}:MenuBtnProps) {
+export default function MenuBtn() {
   const {isMenuOpen,changeMenuStatus} = useMenuContext();
   const [hbgDisp,setHbgDisp] = useState<boolean>(true); 
   useEffect(()=>{
@@ -20,10 +16,12 @@ export default function MenuBtn({size}:MenuBtnProps) {
   const hbgBtnHandler = () => {
     changeMenuStatus(true);
   }
-  const getMenuBtn = (size:string) => {
-    switch (size) {
-      case "Large":
-        return(<button onClick={hbgBtnHandler}>
+
+  return (
+    <>
+      {hbgDisp && <>
+        {/* Large */}
+        <button className={`${Styles.hideLarge}`} onClick={hbgBtnHandler}>
           <svg width="100" height="100">
             <circle cx={50} cy={50} r={50} fill="black" opacity="80%"/>
             <rect x="25" y="27" rx="1" ry="1" width="50" height="2"
@@ -32,11 +30,11 @@ export default function MenuBtn({size}:MenuBtnProps) {
             style={{fill:"white",stroke:"white",strokeWidth:6}} />
             <rect x="25" y="67" rx="1" ry="1" width="50" height="2"
             style={{fill:"white",stroke:"white",strokeWidth:6}} />
-          </svg>  
-        </button>) 
+          </svg>
+        </button>
 
-      case "Medium":
-        return (<button onClick={hbgBtnHandler}>
+        {/* Medium */}
+        <button className={`${Styles.hideMedium}`} onClick={hbgBtnHandler}>
           <svg width="80" height="80">
             <circle cx={40} cy={40} r={40} fill="black" opacity="80%"/>
             <rect x="20" y="22" rx="1" ry="1" width="40" height="2"
@@ -46,10 +44,10 @@ export default function MenuBtn({size}:MenuBtnProps) {
             <rect x="20" y="54" rx="1" ry="1" width="40" height="2"
             style={{fill:"white",stroke:"white",strokeWidth:5}} />
           </svg>  
-        </button>)         
+        </button>
 
-      case "Small":
-        return (<button onClick={hbgBtnHandler}>
+        {/* Small */}
+        <button className={`${Styles.hideSmall}`} onClick={hbgBtnHandler}>
           <svg width="60" height="60">
             <circle cx={30} cy={30} r={30} fill="black" opacity="80%"/>
             <rect x="14" y="15" rx="1" ry="1" width="32" height="2"
@@ -59,16 +57,8 @@ export default function MenuBtn({size}:MenuBtnProps) {
             <rect x="14" y="41" rx="1" ry="1" width="32" height="2"
             style={{fill:"white",stroke:"white",strokeWidth:4}} />
           </svg>  
-        </button>)
-
-      default:
-        break;
-    }
-  }
-
-  return (
-    <>
-      {hbgDisp && getMenuBtn(size)}
-   </>
+        </button>
+      </>}
+    </>
   );
 }

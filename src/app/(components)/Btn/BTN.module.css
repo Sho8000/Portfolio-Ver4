@@ -1,0 +1,35 @@
+@media only screen and (min-width:1441px){
+  .hideLarge{
+    display: block;
+  }
+  .hideMedium{
+    display: none;
+  }
+  .hideSmall{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .hideLarge{
+    display: none;
+  }
+  .hideMedium{
+    display: block;
+  }
+  .hideSmall{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:425px){
+  .hideLarge{
+    display: none;
+  }
+  .hideMedium{
+    display: none;
+  }
+  .hideSmall{
+    display: block;
+  }
+}
