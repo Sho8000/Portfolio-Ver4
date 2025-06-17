@@ -31,8 +31,8 @@ export default function MenuCloseBtn() {
           </svg>  
         </button>
 
-        {/* Medium */}
-        <button className={`${Styles.hideMedium}`} onClick={closeBtnHandler}>
+        {/* Middle */}
+        <button className={`${Styles.hideMiddle}`} onClick={closeBtnHandler}>
           <svg width="80" height="80">
             <circle cx={40} cy={40} r={40} fill="black" opacity="80%"/>
             <line x1="20" y1="20" x2="60" y2="60" style={{stroke:"white",strokeWidth:7,strokeLinecap: "round"}}/>

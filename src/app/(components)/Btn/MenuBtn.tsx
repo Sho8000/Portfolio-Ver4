@@ -33,8 +33,8 @@ export default function MenuBtn() {
           </svg>
         </button>
 
-        {/* Medium */}
-        <button className={`${Styles.hideMedium}`} onClick={hbgBtnHandler}>
+        {/* Middle */}
+        <button className={`${Styles.hideMiddle}`} onClick={hbgBtnHandler}>
           <svg width="80" height="80">
             <circle cx={40} cy={40} r={40} fill="black" opacity="80%"/>
             <rect x="20" y="22" rx="1" ry="1" width="40" height="2"

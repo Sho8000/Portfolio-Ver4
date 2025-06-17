@@ -2,7 +2,7 @@
   .hideLarge{
     display: block;
   }
-  .hideMedium{
+  .hideMiddle{
     display: none;
   }
   .hideSmall{
@@ -14,7 +14,7 @@
   .hideLarge{
     display: none;
   }
-  .hideMedium{
+  .hideMiddle{
     display: block;
   }
   .hideSmall{
@@ -22,11 +22,11 @@
   }
 }
 
-@media only screen and (max-width:425px){
+@media only screen and (max-width:426px){
   .hideLarge{
     display: none;
   }
-  .hideMedium{
+  .hideMiddle{
     display: none;
   }
   .hideSmall{
