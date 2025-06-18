@@ -1,0 +1,11 @@
+@media only screen and (min-width:769px){
+  .btnLocation{
+    justify-content: flex-end;
+  }  
+}
+
+@media only screen and (max-width:768px){
+  .btnLocation{
+    justify-content: space-between;
+  }  
+}
