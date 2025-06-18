@@ -1,20 +1,16 @@
 "use client"
-import { useState } from "react";
 import Styles from "./BTN.module.css"
 import Image from "next/image";
 import LangBtn from "@/../public/NavImages/LanguageBtnImg.png"
+import { useLangStore } from "@/store/useLangStore";
 
 export default function LanguageBtn() {
-  const [language,setLanguage] = useState("English");
-
-  const langBtnHandler = () => {
-    setLanguage(language==="English" ? ("Japanese"):("English"))
-  }
+  const { data, changeLanguage } = useLangStore();
   
   return (
     <>
       {/* Large */}
-      <div className={`relative w-[155px] h-[52px] ${Styles.hideLarge}`} onClick={langBtnHandler}>
+      <div className={`relative w-[155px] h-[52px] ${Styles.hideLarge}`} onClick={changeLanguage}>
         <Image
           className="absolute"
           src={LangBtn}
@@ -22,11 +18,11 @@ export default function LanguageBtn() {
           width={155}
           height={52}
         />
-        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-xl text-gray-600">{language}</p>
+        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-xl text-gray-600">{data.language}</p>
       </div>
 
       {/* Middle */}
-      <div className={`relative w-[120px] h-[41px] ${Styles.hideMiddle}`} onClick={langBtnHandler}>
+      <div className={`relative w-[120px] h-[41px] ${Styles.hideMiddle}`} onClick={changeLanguage}>
         <Image
           className="absolute"
           src={LangBtn}
@@ -34,11 +30,11 @@ export default function LanguageBtn() {
           width={120}
           height={41}
         />
-        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-gray-600">{language}</p>
+        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-gray-600">{data.language}</p>
       </div>
 
       {/* Small */}
-      <div className={`relative w-[85px] h-[30px] ${Styles.hideSmall}`} onClick={langBtnHandler}>
+      <div className={`relative w-[85px] h-[30px] ${Styles.hideSmall}`} onClick={changeLanguage}>
         <Image
           className="absolute"
           src={LangBtn}
@@ -46,7 +42,7 @@ export default function LanguageBtn() {
           width={85}
           height={30}
         />
-        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-[12px] text-gray-600">{language}</p>
+        <p className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-30%] text-[12px] text-gray-600">{data.language}</p>
       </div>
     </>
   );
