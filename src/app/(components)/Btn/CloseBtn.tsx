@@ -2,7 +2,6 @@
 
 import Styles from "./BTN.module.css"
 import { useMenuContext } from "@/app/(context)/MenuBtnContext";
-import { useEffect, useState } from "react";
 
 export default function MenuCloseBtn() {
   const {changeMenuStatus} = useMenuContext();
