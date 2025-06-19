@@ -11,7 +11,7 @@ export default function Navbar() {
   
   return (
     <>
-      <nav className={`fixed w-[90%] flex items-center gap-[2rem] mt-[1rem] left-[50%] translate-x-[-50%] ${Styles.btnLocation}`}>
+      <nav className={`fixed z-40 w-[90%] flex items-center gap-[2rem] mt-[1rem] left-[50%] translate-x-[-50%] ${Styles.btnLocation}`}>
         <LanguageBtn/>
         <MenuBtn/>
       </nav>
