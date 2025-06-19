@@ -1,6 +1,7 @@
 export interface MainDBEntry {
   language: string;
   menu: string[];
+  menuLink: string[];
   landing: {
     jobTitleUp: string;
     jobTitleDown: string;
@@ -53,6 +54,7 @@ export const MainDBEng:MainDBEntry[] = [
   {
     language:"English",
     menu:["Home","About Me","My Projects","Contact Me",],
+    menuLink:["/","/aboutme","/myprojects","contactme"],
     landing:{
       jobTitleUp:"Full-Stack",
       jobTitleDown:"Developer",
@@ -155,7 +157,8 @@ export const MainDBEng:MainDBEntry[] = [
 export const MainDBJpn:MainDBEntry[] = [
   {
     language:"Japanese",
-    menu:["Home","abaut mi-","My Projects","Contact Me",],
+    menu:["ホーム","自己紹介","プロジェクト","問い合わせ",],
+    menuLink:["/","/aboutme","/myprojects","contactme"],
     landing:{
       jobTitleUp:"Full-Stack",
       jobTitleDown:"Developer",
