@@ -10,11 +10,11 @@ export default function Footer() {
   const openLink = (url:string) => {
     window.location.href = url
   }
-  
+
   return (
     <footer className={`relative w-[100%] ${Styles.footerSize} bg-[#f2f2ff] overflow-hidden`}>
       <div className={`absolute z-10 w-[100%] ${Styles.titleFont} top-[50%] translate-y-[-50%]`}>
-        <h1 className={`text-white text-center mb-[2rem]`}>{footer.footerText}</h1>
+        <h1 className={`text-white text-center mb-[1rem]`}>{footer.footerText}</h1>
         <div className="flex justify-center gap-[2rem]">
           { footer.footerInfo.map((item,index)=>{
             return <Image
