@@ -28,7 +28,7 @@
   }
 }
 
-@media only screen and (max-width:426px){
+@media only screen and (max-width:430px){
   .titleFont{
     font-size: 40px;
     font-weight: 700;
@@ -69,6 +69,8 @@
 @media only screen and (max-width:1000px){
   .container{
     position: relative;
+    display: flex;
+    justify-content: center;
   }
   .textArea{
     position: absolute;
@@ -81,7 +83,6 @@
   .imageArea{
     position: absolute;
     height: 100%;
-    text-align: center;
     opacity: 20%;
   }
 }

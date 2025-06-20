@@ -54,7 +54,7 @@ export const MainDBEng:MainDBEntry[] = [
   {
     language:"English",
     menu:["Home","About Me","My Projects","Contact Me",],
-    menuLink:["/","/aboutme","/myprojects","contactme"],
+    menuLink:["/","/aboutme","/myprojects","/contactme"],
     landing:{
       jobTitleUp:"Full-Stack",
       jobTitleDown:"Developer",
@@ -158,11 +158,11 @@ export const MainDBJpn:MainDBEntry[] = [
   {
     language:"Japanese",
     menu:["ホーム","自己紹介","プロジェクト","問い合わせ",],
-    menuLink:["/","/aboutme","/myprojects","contactme"],
+    menuLink:["/","/aboutme","/myprojects","/contactme"],
     landing:{
-      jobTitleUp:"Full-Stack",
-      jobTitleDown:"Developer",
-      subTitle:"Web Page/ Web Application",
+      jobTitleUp:"フルスタック",
+      jobTitleDown:"エンジニア",
+      subTitle:"Webページ作成/ Webアプリケーション作成",
       lading_titles:["I am,,,","Clients Projects", "Personal Projects"],
     },
     aboutMe:{
