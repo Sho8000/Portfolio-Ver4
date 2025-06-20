@@ -1,3 +1,10 @@
+import { StaticImageData } from "next/image";
+import githubImg from "@/../public/FooterImages/github.png"
+import emailImg from "@/../public/FooterImages/Email.png"
+import linkedInImg from "@/../public/FooterImages/LinkedIn.png"
+import instagramImg from "@/../public/FooterImages/instagramLogo.png"
+
+
 export interface MainDBEntry {
   language: string;
   menu: string[];
@@ -47,7 +54,14 @@ export interface MainDBEntry {
     subTitle: string;
     formText: string[];
   };
-  footerText: string;
+  footer:{
+    footerText: string;
+    footerInfo:{
+      footerImges:StaticImageData,
+      footerImgNames:string,
+      url:string,
+    }[],
+  }
 }
 
 export const MainDBEng:MainDBEntry[] = [
@@ -150,7 +164,31 @@ export const MainDBEng:MainDBEntry[] = [
       subTitle:"Ask how I can help you",
       formText:["First Name", "Last Name", "Email", "Message,,,", "Send"],
     },
-    footerText:"Contact Me",
+    footer:{
+      footerText:"Contact Me",
+      footerInfo:[
+        {
+          footerImges:instagramImg,
+          footerImgNames:"instagram",
+          url:"https://www.instagram.com/yoshi_kun_8000?igsh=MWMxOXhiaW1kdzZjdQ==",
+        },
+        {
+          footerImges:linkedInImg,
+          footerImgNames:"linkedIn",
+          url:"https://www.linkedin.com/in/sho-yoshimura-885001261/",
+        },
+        {
+          footerImges:githubImg,
+          footerImgNames:"github",
+          url:"https://github.com/Sho8000",
+        },
+        {
+          footerImges:emailImg,
+          footerImgNames:"email",
+          url:"mailto:sho.website.appbuilder@gmail.com",
+        },
+      ]
+    }
   }
 ]
 
@@ -254,6 +292,30 @@ export const MainDBJpn:MainDBEntry[] = [
       subTitle:"Ask how I can help you",
       formText:["First Name", "Last Name", "Email", "Message,,,", "Send"],
     },
-    footerText:"Contact Me",
+    footer:{
+      footerText:"問い合わせ",
+      footerInfo:[
+        {
+          footerImges:instagramImg,
+          footerImgNames:"instagram",
+          url:"https://www.instagram.com/yoshi_kun_8000?igsh=MWMxOXhiaW1kdzZjdQ==",
+        },
+        {
+          footerImges:linkedInImg,
+          footerImgNames:"linkedIn",
+          url:"https://www.linkedin.com/in/sho-yoshimura-885001261/",
+        },
+        {
+          footerImges:githubImg,
+          footerImgNames:"github",
+          url:"https://github.com/Sho8000",
+        },
+        {
+          footerImges:emailImg,
+          footerImgNames:"email",
+          url:"mailto:sho.website.appbuilder@gmail.com",
+        },
+      ]
+    }
   }
 ]

@@ -1,0 +1,37 @@
+"use client"
+import { useLangStore } from "@/store/useLangStore";
+import Image from "next/image";
+import Styles from "./Footer.module.css"
+
+export default function Footer() {
+  const {data} = useLangStore();
+  const footer = data.footer;
+
+  const openLink = (url:string) => {
+    window.location.href = url
+  }
+  
+  return (
+    <footer className={`relative w-[100%] ${Styles.footerSize} bg-[#f2f2ff] overflow-hidden`}>
+      <div className={`absolute z-10 w-[100%] ${Styles.titleFont} top-[50%] translate-y-[-50%]`}>
+        <h1 className={`text-white text-center mb-[2rem]`}>{footer.footerText}</h1>
+        <div className="flex justify-center gap-[2rem]">
+          { footer.footerInfo.map((item,index)=>{
+            return <Image
+              key={index}
+              className={`${Styles.iconStyle}`}
+              onClick={()=>{openLink(item.url)}}
+              src={item.footerImges}
+              alt={item.footerImgNames}
+              width={100}
+              height={100}
+              priority
+            />
+            })
+          }
+        </div>
+      </div>
+      <div className={`absolute ${Styles.bg} bg-[#2E3A59] rounded-[50%] top-0 left-[50%] translate-x-[-50%]`}></div>  
+    </footer>
+  );
+}
