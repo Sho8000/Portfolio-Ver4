@@ -1,0 +1,113 @@
+/* Text responsive */
+@media only screen and (min-width:1441px){
+  .titleFont{
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 120px;
+    margin-bottom: 2rem;
+  }
+  .myName{
+    font-size: 64px;
+    font-weight: 900;
+  }
+  .commentSizeBold{
+    font-size: 52px;
+  }
+  .commentSize{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .titleFont{
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80px;
+  }
+  .myName{
+    font-size: 65px;
+    font-weight: 700;
+  }
+  .commentSizeBold{
+    font-size: 44px;
+  }
+  .commentSize{
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .titleFont{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .myName{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .commentSizeBold{
+    font-size: 24px;
+  }
+  .commentSize{
+    font-size: 16px;
+  }
+
+}
+
+/* Layout Responsive */
+@media only screen and (min-width:1001px){
+  .container{
+    display: flex;
+    .titleForPhone{
+      display: none;
+    }
+  }
+
+  .textArea{
+    width: 45%;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    .titleForPC{
+      margin: 2rem 0;
+    }
+  }
+  .imageArea{
+    width: 100%;
+    max-width: 50%;
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 100%);
+    mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 100%);
+  }
+  .objectProps{
+    object-position: 10%;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  .container{
+    flex-direction: column;
+    .titleForPhone{
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+  }
+  .textArea{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto 2rem;
+    .titleForPC{
+      display: none;
+    }
+  }
+  .imageArea{
+    width: 50vw;
+    height: 50vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+  }
+  .objectProps{
+    border-radius: 50%;
+    border: 0.3rem solid white;
+  }
+}

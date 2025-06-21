@@ -17,7 +17,6 @@
   .titleFont{
     font-size: 80px;
     font-weight: 700;
-    text-shadow: 4px;
     text-shadow: -3px 3px 3px gray;
     line-height: 80px;
   }
@@ -32,7 +31,6 @@
   .titleFont{
     font-size: 40px;
     font-weight: 700;
-    text-shadow: 4px;
     text-shadow: -2px 2px 2px gray;
     line-height: 40px;
   }

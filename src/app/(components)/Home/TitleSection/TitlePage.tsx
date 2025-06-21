@@ -18,14 +18,14 @@ export default function TitlePage() {
           </div>
           <h2 className={`${Styles.subTitleFont}`}>{data.landing.subTitle}</h2>
         </div>
-        <div className={`${Styles.imageArea} bg-black`}>
+        <div className={`${Styles.imageArea}`}>
           <Image
             className={`object-cover ${Styles.objectPosition}`}
             src={MainImg}
             alt="Main Image"
             width={1200}
             height={1600}
-            style={{width:"auto", height:"100%"}}
+            style={{width:"100%", height:"auto",minHeight:"100%"}}
           />
         </div>
       </div>
