@@ -1,0 +1,62 @@
+/* Text responsive */
+@media only screen and (min-width:1441px){
+  .projectName{
+    font-size: 48px;
+  }
+  .subTitle{
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .projectName{
+    font-size: 36px;
+  }
+  .subTitle{
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .projectName{
+    font-size: 24px;
+  }
+  .subTitle{
+    font-size: 16px;
+  }
+
+}
+
+/* Layout Responsive */
+@media only screen and (min-width:1001px){
+  .containerLeftText{
+    display: grid;
+    grid-template-areas: 
+    "textTitle pic"
+    "textDetail pic"
+    ;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+  }
+  .containerRightText{
+    display: grid;
+    grid-template-areas: 
+    "pic textTitle"
+    "pic textDetail"
+    ;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+  }
+  .textLayout{
+    order: 2;
+    width: 67%;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  .ImageForPC{
+    display: none;
+  }
+}

@@ -3,7 +3,19 @@ import githubImg from "@/../public/FooterImages/github.png"
 import emailImg from "@/../public/FooterImages/Email.png"
 import linkedInImg from "@/../public/FooterImages/LinkedIn.png"
 import instagramImg from "@/../public/FooterImages/instagramLogo.png"
-
+import AkifPC from "@/../public/ProjectImages/AkifPC.png"
+import AkifPCHover from "@/../public/ProjectImages/AkifPCHover.png"
+import AkifPCFull from "@/../public/ProjectImages/AkifPCFull.png"
+import HUHPC from "@/../public/ProjectImages/HUHPC.png"
+import HUHPCHover from "@/../public/ProjectImages/HUHPCHover.png"
+import HUHPCFull from "@/../public/ProjectImages/HUHPCFull.png"
+import VanCastroPC from "@/../public/ProjectImages/VanCastroPC.png"
+import VanCastroPCHover from "@/../public/ProjectImages/VanCastroPCHover.png"
+import VanCastroPCFull from "@/../public/ProjectImages/VanCastroPCFull.png"
+import VanCastroPCFullHover from "@/../public/ProjectImages/VanCastroPCFullHover.png"
+/* import RestaurantPCFull from "@/../public/ProjectImages/RestaurantPCFull.png"
+import LINEPCFull from "@/../public/ProjectImages/LINEPCFull.png"
+ */
 
 export interface MainDBEntry {
   language: string;
@@ -37,17 +49,27 @@ export interface MainDBEntry {
     }[];
   };
   myProject: {
+    clientProjects:{
+      projectTypeName:string;
+      projects:{
+        projectName:string;
+        projectType: string;
+        technologies: string;
+        imagePC:StaticImageData,
+        imagePCFull:StaticImageData,
+        imagePCHover:StaticImageData,
+        imagePCFullHover:StaticImageData,
+  }[];
+    };
+    personalProjects:{
+      projectTypeName:string;
+      projects:{
+        projectName:string;
+        projectType: string;
+        technologies: string;
+      }[];
+    };
     buttonText: string;
-    clientsProjects: {
-      projectName: string;
-      projectType: string;
-      technologies: string;
-    }[];
-    personalProjects: {
-      projectName: string;
-      projectType: string;
-      technologies: string;
-    }[];
   };
   contactMe: {
     title: string;
@@ -128,36 +150,54 @@ export const MainDBEng:MainDBEntry[] = [
       ]
     },
     myProject:{
+      clientProjects:{
+        projectTypeName:"Client Projects",
+        projects:[
+          {
+            projectName:"VanCastro Driving School",
+            projectType:"Booking management system",
+            technologies:"something,,,",
+            imagePC:VanCastroPC,
+            imagePCFull:VanCastroPCFull,
+            imagePCHover:VanCastroPCHover,
+            imagePCFullHover:VanCastroPCFullHover,
+          },
+          {
+            projectName:"HUH",
+            projectType:"Shopify",
+            technologies:"something,,,",
+            imagePC:HUHPC,
+            imagePCFull:HUHPCFull,
+            imagePCHover:HUHPCHover,
+            imagePCFullHover:instagramImg,
+          },
+          {
+            projectName:"AKiF AiRWAY",
+            projectType:"Business introduction",
+            technologies:"something,,,",
+            imagePC:AkifPC,
+            imagePCFull:AkifPCFull,
+            imagePCHover:AkifPCHover,
+            imagePCFullHover:instagramImg,
+          },
+        ],  
+      },
+      personalProjects:{
+        projectTypeName:"Personal Projects",
+        projects:[
+          {
+            projectName:"Create Next App",
+            projectType:"Restaurant menu & Order",
+            technologies:"something,,,",
+          },
+          {
+            projectName:"Line Clone",
+            projectType:"Products introduction",
+            technologies:"something,,,",
+          },  
+        ]
+      },
       buttonText:"Detail",
-      clientsProjects:[
-        {
-          projectName:"VanCastro Driving School",
-          projectType:"Booking management system",
-          technologies:"something,,,",
-        },
-        {
-          projectName:"HUH",
-          projectType:"Shopify",
-          technologies:"something,,,",
-        },
-        {
-          projectName:"AKiF AiRWAY",
-          projectType:"Business introduction",
-          technologies:"something,,,",
-        },
-      ],
-      personalProjects:[
-        {
-          projectName:"Create Next App",
-          projectType:"Restaurant menu & Order",
-          technologies:"something,,,",
-        },
-        {
-          projectName:"Line Clone",
-          projectType:"Products introduction",
-          technologies:"something,,,",
-        },
-      ],
     },
     contactMe:{
       title:"Let's start conversation",
@@ -256,36 +296,54 @@ export const MainDBJpn:MainDBEntry[] = [
       ]
     },
     myProject:{
+      clientProjects:{
+        projectTypeName:"顧客案件",
+        projects:[
+          {
+            projectName:"VanCastro Driving School",
+            projectType:"予約管理システム",
+            technologies:"something,,,",
+            imagePC:instagramImg,
+            imagePCFull:instagramImg,
+            imagePCHover:instagramImg,
+            imagePCFullHover:instagramImg,
+          },
+          {
+            projectName:"HUH",
+            projectType:"ネットショップ",
+            technologies:"something,,,",
+            imagePC:instagramImg,
+            imagePCFull:instagramImg,
+            imagePCHover:instagramImg,
+            imagePCFullHover:instagramImg,
+          },
+          {
+            projectName:"AKiF AiRWAY",
+            projectType:"ビジネス紹介",
+            technologies:"something,,,",
+            imagePC:instagramImg,
+            imagePCFull:instagramImg,
+            imagePCHover:instagramImg,
+            imagePCFullHover:instagramImg,
+          },
+        ],  
+      },
+      personalProjects:{
+        projectTypeName:"個人プロジェクト",
+        projects:[
+          {
+            projectName:"Create Next App",
+            projectType:"レストランメニュー＆注文",
+            technologies:"something,,,",
+          },
+          {
+            projectName:"Lineサイトコピー",
+            projectType:"製品紹介",
+            technologies:"something,,,",
+          },  
+        ]
+      },
       buttonText:"Detail",
-      clientsProjects:[
-        {
-          projectName:"VanCastro Driving School",
-          projectType:"Booking management system",
-          technologies:"something,,,",
-        },
-        {
-          projectName:"HUH",
-          projectType:"Shopify",
-          technologies:"something,,,",
-        },
-        {
-          projectName:"AKiF AiRWAY",
-          projectType:"Business introduction",
-          technologies:"something,,,",
-        },
-      ],
-      personalProjects:[
-        {
-          projectName:"Create Next App",
-          projectType:"Restaurant menu & Order",
-          technologies:"something,,,",
-        },
-        {
-          projectName:"Line Clone",
-          projectType:"Products introduction",
-          technologies:"something,,,",
-        },
-      ],
     },
     contactMe:{
       title:"Let's start conversation",
