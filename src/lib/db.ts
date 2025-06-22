@@ -6,16 +6,21 @@ import instagramImg from "@/../public/FooterImages/instagramLogo.png"
 import AkifPC from "@/../public/ProjectImages/AkifPC.png"
 import AkifPCHover from "@/../public/ProjectImages/AkifPCHover.png"
 import AkifPCFull from "@/../public/ProjectImages/AkifPCFull.png"
+import AkifPhone from "@/../public/ProjectImages/AkifPhone.png"
 import HUHPC from "@/../public/ProjectImages/HUHPC.png"
 import HUHPCHover from "@/../public/ProjectImages/HUHPCHover.png"
 import HUHPCFull from "@/../public/ProjectImages/HUHPCFull.png"
+import HUHPhone from "@/../public/ProjectImages/HUHPhone.png"
 import VanCastroPC from "@/../public/ProjectImages/VanCastroPC.png"
 import VanCastroPCHover from "@/../public/ProjectImages/VanCastroPCHover.png"
 import VanCastroPCFull from "@/../public/ProjectImages/VanCastroPCFull.png"
 import VanCastroPCFullHover from "@/../public/ProjectImages/VanCastroPCFullHover.png"
+import VanCastroPhone from "@/../public/ProjectImages/VanCastroPhone.png"
 /* import RestaurantPCFull from "@/../public/ProjectImages/RestaurantPCFull.png"
+import RestaurantPhone from "@/../public/ProjectImages/RestaurantPhone.png"
 import LINEPCFull from "@/../public/ProjectImages/LINEPCFull.png"
- */
+import LINEPhone from "@/../public/ProjectImages/LINEPhone.png" */
+
 
 export interface MainDBEntry {
   language: string;
@@ -59,6 +64,7 @@ export interface MainDBEntry {
         imagePCFull:StaticImageData,
         imagePCHover:StaticImageData,
         imagePCFullHover:StaticImageData,
+        imagePhone:StaticImageData,
   }[];
     };
     personalProjects:{
@@ -161,6 +167,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCFull:VanCastroPCFull,
             imagePCHover:VanCastroPCHover,
             imagePCFullHover:VanCastroPCFullHover,
+            imagePhone:VanCastroPhone,
           },
           {
             projectName:"HUH",
@@ -170,6 +177,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCFull:HUHPCFull,
             imagePCHover:HUHPCHover,
             imagePCFullHover:instagramImg,
+            imagePhone:HUHPhone,
           },
           {
             projectName:"AKiF AiRWAY",
@@ -179,6 +187,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCFull:AkifPCFull,
             imagePCHover:AkifPCHover,
             imagePCFullHover:instagramImg,
+            imagePhone:AkifPhone,
           },
         ],  
       },
@@ -307,6 +316,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCFull:instagramImg,
             imagePCHover:instagramImg,
             imagePCFullHover:instagramImg,
+            imagePhone:VanCastroPhone,
           },
           {
             projectName:"HUH",
@@ -316,6 +326,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCFull:instagramImg,
             imagePCHover:instagramImg,
             imagePCFullHover:instagramImg,
+            imagePhone:instagramImg,
           },
           {
             projectName:"AKiF AiRWAY",
@@ -325,6 +336,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCFull:instagramImg,
             imagePCHover:instagramImg,
             imagePCFullHover:instagramImg,
+            imagePhone:instagramImg,
           },
         ],  
       },

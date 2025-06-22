@@ -16,6 +16,17 @@ export default function ProjectCard({textLeft, bgColor}:ProjectCardProps) {
 
   return (
     <div className={`w-[90%] m-auto shadow-[-10px_10px_10px_rgba(0,0,0,0.25)] rounded-[40px] p-[2rem] items-center ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)} ${bgColor}`}>
+      {/* Image for phone */}
+      <div className={`${Styles.phoneImg}`}>
+        <Image
+          src={projectInfo.projects[0].imagePhone}
+          alt="Phone Image"
+          width={120}
+          height={240}
+        />
+      </div>
+
+      {/* Text Area */}
       <div className="flex flex-col justify-center h-[100%] border-b-1 border-gray-500">
         <h2 className={`${Styles.projectName} font-bold`}>{projectInfo.projects[0].projectName}</h2>
         <p className={`${Styles.subTitle}`}>{projectInfo.projects[0].projectType}</p>
@@ -50,7 +61,6 @@ export default function ProjectCard({textLeft, bgColor}:ProjectCardProps) {
           />
         </div>
       </div>
-      
     </div>
   );
 }

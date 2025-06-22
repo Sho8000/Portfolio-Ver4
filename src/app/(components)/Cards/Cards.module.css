@@ -49,6 +49,9 @@
     grid-template-rows: 1fr 1fr;
     column-gap: 1rem;
   }
+  .phoneImg{
+    display: none;
+  }
   .textLayout{
     order: 2;
     width: 67%;
@@ -56,7 +59,27 @@
 }
 
 @media only screen and (max-width:1000px){
+  .containerLeftText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .containerRightText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .phoneImg{
+    margin: auto;
+  }
   .ImageForPC{
     display: none;
   }
+  .subTitle{
+    margin-bottom: 1rem;
+  }
+
 }
