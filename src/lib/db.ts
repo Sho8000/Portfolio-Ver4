@@ -16,10 +16,10 @@ import VanCastroPCHover from "@/../public/ProjectImages/VanCastroPCHover.png"
 import VanCastroPCFull from "@/../public/ProjectImages/VanCastroPCFull.png"
 import VanCastroPCFullHover from "@/../public/ProjectImages/VanCastroPCFullHover.png"
 import VanCastroPhone from "@/../public/ProjectImages/VanCastroPhone.png"
-/* import RestaurantPCFull from "@/../public/ProjectImages/RestaurantPCFull.png"
+import RestaurantPCFull from "@/../public/ProjectImages/RestaurantPCFull.png"
 import RestaurantPhone from "@/../public/ProjectImages/RestaurantPhone.png"
 import LINEPCFull from "@/../public/ProjectImages/LINEPCFull.png"
-import LINEPhone from "@/../public/ProjectImages/LINEPhone.png" */
+import LINEPhone from "@/../public/ProjectImages/LINEPhone.png"
 
 
 export interface MainDBEntry {
@@ -73,6 +73,11 @@ export interface MainDBEntry {
         projectName:string;
         projectType: string;
         technologies: string;
+        imagePC:StaticImageData,
+        imagePCFull:StaticImageData,
+        imagePCHover:StaticImageData,
+        imagePCFullHover:StaticImageData,
+        imagePhone:StaticImageData,
       }[];
     };
     buttonText: string;
@@ -198,11 +203,21 @@ export const MainDBEng:MainDBEntry[] = [
             projectName:"Create Next App",
             projectType:"Restaurant menu & Order",
             technologies:"something,,,",
+            imagePC:instagramImg,
+            imagePCFull:RestaurantPCFull,
+            imagePCHover:instagramImg,
+            imagePCFullHover:instagramImg,
+            imagePhone:RestaurantPhone,
           },
           {
             projectName:"Line Clone",
             projectType:"Products introduction",
             technologies:"something,,,",
+            imagePC:instagramImg,
+            imagePCFull:LINEPCFull,
+            imagePCHover:instagramImg,
+            imagePCFullHover:instagramImg,
+            imagePhone:LINEPhone,
           },  
         ]
       },
@@ -312,31 +327,31 @@ export const MainDBJpn:MainDBEntry[] = [
             projectName:"VanCastro Driving School",
             projectType:"予約管理システム",
             technologies:"something,,,",
-            imagePC:instagramImg,
-            imagePCFull:instagramImg,
-            imagePCHover:instagramImg,
-            imagePCFullHover:instagramImg,
+            imagePC:VanCastroPC,
+            imagePCFull:VanCastroPCFull,
+            imagePCHover:VanCastroPCHover,
+            imagePCFullHover:VanCastroPCFullHover,
             imagePhone:VanCastroPhone,
           },
           {
             projectName:"HUH",
             projectType:"ネットショップ",
             technologies:"something,,,",
-            imagePC:instagramImg,
-            imagePCFull:instagramImg,
-            imagePCHover:instagramImg,
+            imagePC:HUHPC,
+            imagePCFull:HUHPCFull,
+            imagePCHover:HUHPCHover,
             imagePCFullHover:instagramImg,
-            imagePhone:instagramImg,
+            imagePhone:HUHPhone,
           },
           {
             projectName:"AKiF AiRWAY",
             projectType:"ビジネス紹介",
             technologies:"something,,,",
-            imagePC:instagramImg,
-            imagePCFull:instagramImg,
-            imagePCHover:instagramImg,
+            imagePC:AkifPC,
+            imagePCFull:AkifPCFull,
+            imagePCHover:AkifPCHover,
             imagePCFullHover:instagramImg,
-            imagePhone:instagramImg,
+            imagePhone:AkifPhone,
           },
         ],  
       },
@@ -347,11 +362,21 @@ export const MainDBJpn:MainDBEntry[] = [
             projectName:"Create Next App",
             projectType:"レストランメニュー＆注文",
             technologies:"something,,,",
+            imagePC:instagramImg,
+            imagePCFull:RestaurantPCFull,
+            imagePCHover:instagramImg,
+            imagePCFullHover:instagramImg,
+            imagePhone:RestaurantPhone,
           },
           {
             projectName:"Lineサイトコピー",
             projectType:"製品紹介",
             technologies:"something,,,",
+            imagePC:instagramImg,
+            imagePCFull:LINEPCFull,
+            imagePCHover:instagramImg,
+            imagePCFullHover:instagramImg,
+            imagePhone:LINEPhone,
           },  
         ]
       },
