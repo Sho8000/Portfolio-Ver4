@@ -1,7 +1,7 @@
 "use client"
 
-import ProjectCard from "../../Cards/ProjectCard";
-/* import Styles from "./ProjectsSection.module.css" */
+import ProjectCarousel from "../../ProjectCarousel/ProjectCarousel";
+import Styles from "./ProjectsSection.module.css"
 import { useLangStore } from "@/store/useLangStore";
 
 interface ProjectsProps {
@@ -15,12 +15,10 @@ export default function ProjectsSection({type, bgColor}:ProjectsProps) {
   const CardBG = bgColor==="bg-[#f2f2ff]"?("bg-[#fdfdfd]"):("bg-[#f2f2ff]")
   
   return (
-    <section className={`w-[100%] min-h-[100vh] ${bgColor}`}>
-      <h1>{projectInfo.projectTypeName}</h1>
-        {projectInfo.projects.map((item,index)=>{
-          return <ProjectCard key={index} textLeft={true} bgColor={CardBG} project={item}/>
-        })}
+    <section className={`w-[100%] h-auto ${bgColor} py-[2rem]`}>
+      <h1 className={`${Styles.projectTitle} text-center py-[2rem]`}>{projectInfo.projectTypeName}</h1>
 
+      <ProjectCarousel cardBG={CardBG} projectInfo={projectInfo.projects}/>
     </section>
   );
 }

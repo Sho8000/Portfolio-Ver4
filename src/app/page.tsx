@@ -9,6 +9,7 @@ export default function Home() {
     <>
       <TitlePage/>
       <IAM/>
+      
       <ProjectsSection type="client" bgColor="bg-[#fdfdfd]"/>
       <ProjectsSection type="personal" bgColor="bg-[#f2f2ff]"/>
       <Footer/>
