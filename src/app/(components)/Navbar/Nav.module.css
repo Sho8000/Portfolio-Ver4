@@ -1,3 +1,49 @@
+/* Title area */
+@media only screen and (min-width:1441px){
+  .titleArea{
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .titleArea{
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .titleArea{
+    height: 60px;
+  }
+}
+
+/* Text size */
+/* Text responsive */
+@media only screen and (min-width:1441px){
+  .titleFont{
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 120px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .titleFont{
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80px;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .titleFont{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+}
+
+/* Btn Layout */
 @media only screen and (min-width:769px){
   .btnLocation{
     justify-content: flex-end;

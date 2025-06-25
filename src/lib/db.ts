@@ -24,8 +24,10 @@ import LINEPhone from "@/../public/ProjectImages/LINEPhone.png"
 
 export interface MainDBEntry {
   language: string;
-  menu: string[];
-  menuLink: string[];
+  menuItems:{
+    title:string;
+    link:string;
+  }[]
   landing: {
     jobTitleUp: string;
     jobTitleDown: string;
@@ -100,8 +102,24 @@ export interface MainDBEntry {
 export const MainDBEng:MainDBEntry[] = [
   {
     language:"English",
-    menu:["Home","About Me","My Projects","Contact Me",],
-    menuLink:["/","/aboutme","/myprojects","/contactme"],
+    menuItems:[
+      {
+        title:"Home",
+        link:"/",
+      },
+      {
+        title:"About Me",
+        link:"/aboutme",
+      },
+      {
+        title:"My Projects",
+        link:"/myprojects",
+      },
+      {
+        title:"Contact Me",
+        link:"/contactme",
+      },
+    ],
     landing:{
       jobTitleUp:"Full-Stack",
       jobTitleDown:"Developer",
@@ -259,8 +277,24 @@ export const MainDBEng:MainDBEntry[] = [
 export const MainDBJpn:MainDBEntry[] = [
   {
     language:"Japanese",
-    menu:["ホーム","自己紹介","プロジェクト","問い合わせ",],
-    menuLink:["/","/aboutme","/myprojects","/contactme"],
+    menuItems:[
+      {
+        title:"ホーム",
+        link:"/",
+      },
+      {
+        title:"自己紹介",
+        link:"/aboutme",
+      },
+      {
+        title:"プロジェクト",
+        link:"/myprojects",
+      },
+      {
+        title:"問い合わせ",
+        link:"/contactme",
+      },
+    ],
     landing:{
       jobTitleUp:"フルスタック",
       jobTitleDown:"エンジニア",

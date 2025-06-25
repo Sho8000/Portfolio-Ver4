@@ -18,13 +18,13 @@ export default function Menu() {
       </div>
       <div className="absolute z-40 w-full h-full max-w-[660px] max-h-[840px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[#2E3A59]/80">
         <div className={`w-[100%] h-[100%] flex flex-col justify-center items-center text-white ${Styles.fontSize} gap-[2rem]`}>
-          {data.menu.map((item,index)=>{
+          {data.menuItems.map((item,index)=>{
             return <Link
               key={index}
-              className={(pathName === data.menuLink[index]) ? Styles.isActive : ""}
-              href={data.menuLink[index]}
+              className={(pathName === item.link) ? Styles.isActive : ""}
+              href={item.link}
               >
-                <h2 onClick={()=>{changeMenuStatus(false)}}>{item}</h2>
+                <h2 onClick={()=>{changeMenuStatus(false)}}>{item.title}</h2>
               </Link>
             })
           }
