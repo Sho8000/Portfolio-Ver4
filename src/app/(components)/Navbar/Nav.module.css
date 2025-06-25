@@ -1,24 +1,4 @@
-/* Title area */
-@media only screen and (min-width:1441px){
-  .titleArea{
-    height: 100px;
-  }
-}
-
-@media only screen and (max-width:1440px){
-  .titleArea{
-    height: 80px;
-  }
-}
-
-@media only screen and (max-width:430px){
-  .titleArea{
-    height: 60px;
-  }
-}
-
 /* Text size */
-/* Text responsive */
 @media only screen and (min-width:1441px){
   .titleFont{
     font-size: 120px;
@@ -29,7 +9,7 @@
 
 @media only screen and (max-width:1440px){
   .titleFont{
-    font-size: 80px;
+    font-size: 68px;
     font-weight: 700;
     line-height: 80px;
   }
@@ -43,7 +23,39 @@
   }
 }
 
-/* Btn Layout */
+/* Title area */
+@media only screen and (min-width:1441px){
+  .titleArea{
+    width: 75%;
+    height: 100px;
+    padding: 1rem 0;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .titleArea{
+    width: 70%;
+    height: 80px;
+    padding: 1rem 0;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .titleArea{
+    width: 100%;
+    height: 80px;
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .titleArea{
+    height: 60px;
+  }
+}
+
+/* Layout */
 @media only screen and (min-width:769px){
   .btnLocation{
     justify-content: flex-end;
@@ -53,5 +65,5 @@
 @media only screen and (max-width:768px){
   .btnLocation{
     justify-content: space-between;
-  }  
+  }
 }

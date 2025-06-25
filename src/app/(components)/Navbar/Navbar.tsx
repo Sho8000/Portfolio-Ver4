@@ -22,7 +22,7 @@ export default function Navbar() {
         <MenuBtn/>
       </nav>
       {haveHeight ||
-        <h1 className={`w-[70%] py-[1rem] box-content text-center ${Styles.titleArea} ${Styles.titleFont}`}>
+        <h1 className={`box-content text-center ${Styles.titleArea} ${Styles.titleFont}`}>
           {data.menuItems.find(item => item.link === pathName)?.title || "unknownPage"}
         </h1>
       }
