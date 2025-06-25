@@ -83,4 +83,7 @@
     height: 100%;
     opacity: 20%;
   }
+  .objectPosition{
+    object-position: center;
+  }
 }

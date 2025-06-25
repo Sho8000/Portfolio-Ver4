@@ -11,7 +11,7 @@ export default function TitlePage() {
   return (
     <section className="w-[100%] h-[100vh] bg-[#fdfdfd]">
       <div className={`${Styles.container} w-[100%] h-[100%]`}>
-        <div className={`${Styles.textArea} w-[70%]`}>
+        <div className={`${Styles.textArea} w-[80%]`}>
           <div className={`${Styles.titleFont}`}>
             <h1>{data.landing.jobTitleUp}</h1>
             <h1>{data.landing.jobTitleDown}</h1>
