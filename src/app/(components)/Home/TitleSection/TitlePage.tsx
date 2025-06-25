@@ -25,7 +25,15 @@ export default function TitlePage() {
             alt="Main Image"
             width={1200}
             height={1600}
-            style={{width:"100%", height:"auto",minHeight:"100%"}}
+            priority
+            loading="eager"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              willChange: "transform",
+              backgroundColor: "#fff",
+            }}
           />
         </div>
       </div>
