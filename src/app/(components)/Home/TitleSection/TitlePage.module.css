@@ -60,7 +60,7 @@
     mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 100%);
   }
   .objectPosition{
-    object-position: 70%;
+    object-position: center;
   }
 }
 
