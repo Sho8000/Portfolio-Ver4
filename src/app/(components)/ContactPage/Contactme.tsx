@@ -2,10 +2,10 @@
 
 import Styles from "./Contactme.module.css";
 import NormalBtn from "../Btn/NormalBtn";
-
 import { useLangStore } from "@/store/useLangStore";
 import Image from "next/image";
 import { useState } from "react";
+import toast from 'react-hot-toast';
 
 export default function Contactme() {
   const {data} = useLangStore();
@@ -21,7 +21,7 @@ export default function Contactme() {
     
     /*if no data then quit submitting */
     if(!formData.firstName || !formData.lastName || !formData.email || !formData.message){
-      alert("Please Input Information")
+      toast.error('Please Input All Information');
       return null;
     }
 
@@ -40,8 +40,9 @@ export default function Contactme() {
         email:"",
         message:"",
       })
+      toast.success("Message sent successfully!");
     } else {
-      alert("couldn't send your message,,,")
+      toast.error('Failed to send message. Please try again.');
     }
     return null;
   }
