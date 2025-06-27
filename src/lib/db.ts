@@ -20,6 +20,8 @@ import RestaurantPCFull from "@/../public/ProjectImages/RestaurantPCFull.png"
 import RestaurantPhone from "@/../public/ProjectImages/RestaurantPhone.png"
 import LINEPCFull from "@/../public/ProjectImages/LINEPCFull.png"
 import LINEPhone from "@/../public/ProjectImages/LINEPhone.png"
+import MyPicture from "@/../public/LandingpageImages/MyPicture.png"
+import MainImg from "@/../public/LandingpageImages/MainImg.jpg"
 
 
 export interface MainDBEntry {
@@ -33,6 +35,8 @@ export interface MainDBEntry {
     jobTitleDown: string;
     subTitle: string;
     lading_titles: string[];
+    mainImage: StaticImageData;
+    myPic: StaticImageData;
   };
   aboutMe: {
     myName: string;
@@ -125,6 +129,8 @@ export const MainDBEng:MainDBEntry[] = [
       jobTitleDown:"Developer",
       subTitle:"Web Page/ Web Application",
       lading_titles:["I am,,,","Clients Projects", "Personal Projects"],
+      mainImage:MainImg,
+      myPic:MyPicture,
     },
     aboutMe:{
       myName:"Sho Yoshimra",
@@ -300,6 +306,8 @@ export const MainDBJpn:MainDBEntry[] = [
       jobTitleDown:"エンジニア",
       subTitle:"Webページ作成/ Webアプリケーション作成",
       lading_titles:["I am,,,","Clients Projects", "Personal Projects"],
+      mainImage:MainImg,
+      myPic:MyPicture,
     },
     aboutMe:{
       myName:"Sho Yoshimra",

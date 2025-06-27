@@ -1,3 +1,4 @@
+/* Button responsive */
 @media only screen and (min-width:1441px){
   .hideLarge{
     display: block;
@@ -7,6 +8,11 @@
   }
   .hideSmall{
     display: none;
+  }
+  .btnSize{
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: -5px 5px 5px gray;
   }
 }
 
@@ -20,6 +26,11 @@
   .hideSmall{
     display: none;
   }
+  .btnSize{
+    height: 60px;
+    border-radius: 6px;
+    box-shadow: -3px 3px 3px gray;
+  }
 }
 
 @media only screen and (max-width:430px){
@@ -31,5 +42,32 @@
   }
   .hideSmall{
     display: block;
+  }
+  .btnSize{
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: -2px 2px 2px gray;
+  }
+}
+
+/* Text responsive */
+@media only screen and (min-width:1441px){
+  .btnFont{
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .btnFont{
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .btnFont{
+    font-size: 16px;
+    font-weight: 700;
   }
 }

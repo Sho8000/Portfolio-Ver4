@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Styles from "./IAmSection.module.css"
-import MyPicture from "@/../public/LandingpageImages/MyPicture.png"
 import { useLangStore } from "@/store/useLangStore";
 
 export default function IAM() {
@@ -14,7 +13,7 @@ export default function IAM() {
         <h1 className={`${Styles.titleForPhone} ${Styles.titleFont}`}>{data.landing.lading_titles[0]}</h1>
         <div className={`relative ${Styles.imageArea}`}>
           <Image
-            src={MyPicture}
+            src={data.landing.myPic}
             alt="Main Image"
             fill
             className={`object-cover ${Styles.objectProps}`}

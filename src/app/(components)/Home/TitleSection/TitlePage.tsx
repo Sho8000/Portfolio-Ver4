@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Styles from "./TitlePage.module.css"
-import MainImg from "@/../public/LandingpageImages/MainImg.jpg"
 import { useLangStore } from "@/store/useLangStore";
 
 export default function TitlePage() {
@@ -21,7 +20,7 @@ export default function TitlePage() {
         <div className={`${Styles.imageArea}`}>
           <Image
             className={`object-cover ${Styles.objectPosition}`}
-            src={MainImg}
+            src={data.landing.mainImage}
             alt="Main Image"
             width={1200}
             height={1600}

@@ -1,0 +1,100 @@
+/* Text and InputBox responsive  */
+@media only screen and (min-width:1441px){
+  .mainFont{
+    font-size: 96px;
+    font-weight: 700;
+  }
+  .subFont{
+    font-size: 48px;
+  }
+  .placeholder{
+    @apply
+    text-[28px]
+    placeholder:text-[28px]
+    pl-[1rem]
+  }
+  .inputBox{
+    background-color: white;
+    height: 80px;
+    border: 3px solid black;
+    border-radius: 8px;
+  }
+  .messageBox{
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .mainFont{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+
+  }
+  .subFont{
+    font-size: 32px;
+  }
+  .inputBox{
+    height: 60px;
+  }
+  .placeholder{
+    @apply
+    text-[21px]
+    placeholder:text-[21px]
+    pl-[1rem]
+  }
+  .inputBox{
+    background-color: white;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 6px;
+  }
+  .messageBox{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 6px;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .mainFont{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+  .subFont{
+    font-size: 16px;
+  }
+  .placeholder{
+    @apply
+    text-[14px]
+    placeholder:text-[14px]
+    pl-[1rem]
+  }
+  .inputBox{
+    background-color: white;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  .messageBox{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+}
+
+/* Layout Responsive */
+@media only screen and (min-width:1001px){
+  .titleArea{
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  .titleArea{
+    padding-top: 1rem;
+  }
+}
