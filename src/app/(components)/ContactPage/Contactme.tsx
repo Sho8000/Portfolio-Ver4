@@ -9,6 +9,8 @@ import toast from 'react-hot-toast';
 
 export default function Contactme() {
   const {data} = useLangStore();
+  const contactData = data.contactMe;
+
   const [formData, setformData] = useState({
     firstName: "",
     lastName: "",
@@ -51,8 +53,8 @@ export default function Contactme() {
     <section className={`w-[100%] min-h-[70vh] flex items-center justify-center bg-[#f2f2ff] ${Styles.sectionResponsive}`}>
       <div>
         <div className={`text-center ${Styles.titleContainer}`}>
-          <h2 className={`${Styles.mainFont} ${Styles.titleArea}`}>Let&apos;s Start Conversation</h2>
-          <p className={`${Styles.subFont}`}>Ask how I can help you</p>
+          <h2 className={`${Styles.mainFont} ${Styles.titleArea}`}>{contactData.title}</h2>
+          <p className={`${Styles.subFont}`}>{contactData.subTitle}</p>
         </div>
         <div className={`w-[90%] flex justify-center gap-x-[3rem] gap-y-[1rem] m-auto ${Styles.formContainer}`}>
           <div className={`flex justify-center items-center ${Styles.imageArea}`}>
@@ -69,7 +71,7 @@ export default function Contactme() {
               <input 
                 className={`w-[45%] ${Styles.inputBox} ${Styles.placeholder}`} 
                 type="text" 
-                placeholder="First Name"
+                placeholder={contactData.formText[0]}
                 value={formData.firstName}
                 onChange={(e)=> setformData({ ...formData,firstName:e.target.value})}
                 required
@@ -77,7 +79,7 @@ export default function Contactme() {
               <input 
                 className={`w-[45%] ${Styles.inputBox} ${Styles.placeholder}`}
                 type="text" 
-                placeholder="Last Name"
+                placeholder={contactData.formText[1]}
                 value={formData.lastName}
                 onChange={(e)=> setformData({ ...formData,lastName:e.target.value})}
                 required
@@ -86,7 +88,7 @@ export default function Contactme() {
             <input
               className={`${Styles.inputBox} ${Styles.placeholder}`}
               type="email"
-              placeholder="email"
+              placeholder={contactData.formText[2]}
               value={formData.email}
               onChange={(e)=> setformData({ ...formData,email:e.target.value})}
               required
@@ -94,12 +96,12 @@ export default function Contactme() {
             <textarea
               className={`${Styles.messageBox} ${Styles.placeholder} pt-[0.5rem]`}
               rows={5}
-              placeholder="message,,,"
+              placeholder={contactData.formText[3]}
               value={formData.message}
               onChange={(e)=> setformData({ ...formData,message:e.target.value})}
               required
             />
-            <NormalBtn text="detail"/>
+            <NormalBtn text={contactData.formText[4]}/>
           </form>
         </div>
       </div>

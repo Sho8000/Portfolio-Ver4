@@ -425,9 +425,9 @@ export const MainDBJpn:MainDBEntry[] = [
       buttonText:"Detail",
     },
     contactMe:{
-      title:"Let's start conversation",
-      subTitle:"Ask how I can help you",
-      formText:["First Name", "Last Name", "Email", "Message,,,", "Send"],
+      title:"お気軽にご相談を",
+      subTitle:"お力になれることがあれば教えてください。",
+      formText:["姓", "名", "メール", "メッセージ,,,", "送信"],
     },
     footer:{
       footerText:"問い合わせ",
