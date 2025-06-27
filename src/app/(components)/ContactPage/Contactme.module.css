@@ -88,13 +88,59 @@
 
 /* Layout Responsive */
 @media only screen and (min-width:1001px){
+  .sectionResponsive{
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  .titleContainer{
+    margin-bottom: 3rem;
+  }
   .titleArea{
     padding-top: 2rem;
+  }
+  .imageArea{
+    width: 40%;
+  }
+  .formArea{
+   width: 40%; 
+   gap: 2rem;
   }
 }
 
 @media only screen and (max-width:1000px){
+  .sectionResponsive{
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  .titleContainer{
+    margin-bottom: 2rem;
+  }
   .titleArea{
     padding-top: 1rem;
   }
+  .formContainer{
+    flex-direction: column;
+  }
+  .imageArea{
+    width: 80%;
+    margin: auto;
+  }
+  .formArea{
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .sectionResponsive{
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  .formArea{
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
 }
