@@ -6,19 +6,27 @@ import instagramImg from "@/../public/FooterImages/instagramLogo.png"
 import AkifPC from "@/../public/ProjectImages/AkifPC.png"
 import AkifPCHover from "@/../public/ProjectImages/AkifPCHover.png"
 import AkifPCFull from "@/../public/ProjectImages/AkifPCFull.png"
+import AkifPCFullHover from "@/../public/ProjectImages/AkifPCFullHover.png"
 import AkifPhone from "@/../public/ProjectImages/AkifPhone.png"
 import HUHPC from "@/../public/ProjectImages/HUHPC.png"
 import HUHPCHover from "@/../public/ProjectImages/HUHPCHover.png"
 import HUHPCFull from "@/../public/ProjectImages/HUHPCFull.png"
+import HUHPCFullHover from "@/../public/ProjectImages/HUHPCFullHover.png"
 import HUHPhone from "@/../public/ProjectImages/HUHPhone.png"
 import VanCastroPC from "@/../public/ProjectImages/VanCastroPC.png"
 import VanCastroPCHover from "@/../public/ProjectImages/VanCastroPCHover.png"
 import VanCastroPCFull from "@/../public/ProjectImages/VanCastroPCFull.png"
 import VanCastroPCFullHover from "@/../public/ProjectImages/VanCastroPCFullHover.png"
 import VanCastroPhone from "@/../public/ProjectImages/VanCastroPhone.png"
+import RestaurantPC from "@/../public/ProjectImages/RestaurantPC.png"
+import RestaurantPCHover from "@/../public/ProjectImages/RestaurantPCHover.png"
 import RestaurantPCFull from "@/../public/ProjectImages/RestaurantPCFull.png"
+import RestaurantPCFullHover from "@/../public/ProjectImages/RestaurantPCFullHover.png"
 import RestaurantPhone from "@/../public/ProjectImages/RestaurantPhone.png"
+import LINEPC from "@/../public/ProjectImages/LINEPC.png"
+import LINEPCHover from "@/../public/ProjectImages/LINEPCHover.png"
 import LINEPCFull from "@/../public/ProjectImages/LINEPCFull.png"
+import LINEPCFullHover from "@/../public/ProjectImages/LINEPCFullHover.png"
 import LINEPhone from "@/../public/ProjectImages/LINEPhone.png"
 import MyPicture from "@/../public/LandingpageImages/MyPicture.png"
 import MainImg from "@/../public/LandingpageImages/MainImg.jpg"
@@ -205,7 +213,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePC:HUHPC,
             imagePCFull:HUHPCFull,
             imagePCHover:HUHPCHover,
-            imagePCFullHover:instagramImg,
+            imagePCFullHover:HUHPCFullHover,
             imagePhone:HUHPhone,
           },
           {
@@ -215,7 +223,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePC:AkifPC,
             imagePCFull:AkifPCFull,
             imagePCHover:AkifPCHover,
-            imagePCFullHover:instagramImg,
+            imagePCFullHover:AkifPCFullHover,
             imagePhone:AkifPhone,
           },
         ],  
@@ -227,20 +235,20 @@ export const MainDBEng:MainDBEntry[] = [
             projectName:"Create Next App",
             projectType:"Restaurant menu & Order",
             technologies:"something,,,",
-            imagePC:instagramImg,
+            imagePC:RestaurantPC,
             imagePCFull:RestaurantPCFull,
-            imagePCHover:instagramImg,
-            imagePCFullHover:instagramImg,
+            imagePCHover:RestaurantPCHover,
+            imagePCFullHover:RestaurantPCFullHover,
             imagePhone:RestaurantPhone,
           },
           {
             projectName:"Line Clone",
             projectType:"Products introduction",
             technologies:"something,,,",
-            imagePC:instagramImg,
+            imagePC:LINEPC,
             imagePCFull:LINEPCFull,
-            imagePCHover:instagramImg,
-            imagePCFullHover:instagramImg,
+            imagePCHover:LINEPCHover,
+            imagePCFullHover:LINEPCFullHover,
             imagePhone:LINEPhone,
           },  
         ]
@@ -382,7 +390,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePC:HUHPC,
             imagePCFull:HUHPCFull,
             imagePCHover:HUHPCHover,
-            imagePCFullHover:instagramImg,
+            imagePCFullHover:HUHPCFullHover,
             imagePhone:HUHPhone,
           },
           {
@@ -392,7 +400,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePC:AkifPC,
             imagePCFull:AkifPCFull,
             imagePCHover:AkifPCHover,
-            imagePCFullHover:instagramImg,
+            imagePCFullHover:AkifPCFullHover,
             imagePhone:AkifPhone,
           },
         ],  
@@ -404,20 +412,20 @@ export const MainDBJpn:MainDBEntry[] = [
             projectName:"Create Next App",
             projectType:"レストランメニュー＆注文",
             technologies:"something,,,",
-            imagePC:instagramImg,
+            imagePC:RestaurantPC,
             imagePCFull:RestaurantPCFull,
-            imagePCHover:instagramImg,
-            imagePCFullHover:instagramImg,
+            imagePCHover:RestaurantPCHover,
+            imagePCFullHover:RestaurantPCFullHover,
             imagePhone:RestaurantPhone,
           },
           {
             projectName:"Lineサイトコピー",
             projectType:"製品紹介",
             technologies:"something,,,",
-            imagePC:instagramImg,
+            imagePC:LINEPC,
             imagePCFull:LINEPCFull,
-            imagePCHover:instagramImg,
-            imagePCFullHover:instagramImg,
+            imagePCHover:LINEPCHover,
+            imagePCFullHover:LINEPCFullHover,
             imagePhone:LINEPhone,
           },  
         ]

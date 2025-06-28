@@ -8,10 +8,10 @@ import RightBtn from "../Btn/RightBtn";
 interface ProjectsProps {
   cardBG:"bg-[#f2f2ff]"|"bg-[#fdfdfd]"; 
   projectInfo:MainDBEntry["myProject"]["clientProjects"]["projects"]|MainDBEntry["myProject"]["personalProjects"]["projects"];
-  
+  textLeft:boolean;
 }
 
-export default function ProjectCarousel({cardBG,projectInfo}:ProjectsProps) {
+export default function ProjectCarousel({cardBG,projectInfo,textLeft}:ProjectsProps) {
 	const [currentPage,setCurrentPage] = useState<number>(1);
 	const totalPage = projectInfo.length;
 
@@ -36,7 +36,7 @@ export default function ProjectCarousel({cardBG,projectInfo}:ProjectsProps) {
 
   return (
     <div className="w-[90%] m-auto">
-      <ProjectCard textLeft={true} bgColor={cardBG} project={projectInfo[currentPage-1]}/>
+      <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]}/>
       <div className="w-[90%] flex justify-between m-auto items-center py-[2rem]">
         <div onClick={handlePrevious}>
           <LeftBtn/>
