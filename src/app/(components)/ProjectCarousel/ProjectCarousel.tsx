@@ -9,9 +9,10 @@ interface ProjectsProps {
   cardBG:"bg-[#f2f2ff]"|"bg-[#fdfdfd]"; 
   projectInfo:MainDBEntry["myProject"]["clientProjects"]["projects"]|MainDBEntry["myProject"]["personalProjects"]["projects"];
   textLeft:boolean;
+  container?:"none";
 }
 
-export default function ProjectCarousel({cardBG,projectInfo,textLeft}:ProjectsProps) {
+export default function ProjectCarousel({cardBG,projectInfo,textLeft,container}:ProjectsProps) {
 	const [currentPage,setCurrentPage] = useState<number>(1);
 	const totalPage = projectInfo.length;
 
@@ -36,7 +37,7 @@ export default function ProjectCarousel({cardBG,projectInfo,textLeft}:ProjectsPr
 
   return (
     <div className="w-[90%] m-auto">
-      <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]}/>
+      <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]} container={container}/>
       <div className="w-[90%] flex justify-between m-auto items-center py-[2rem]">
         <div onClick={handlePrevious}>
           <LeftBtn/>

@@ -1,17 +1,24 @@
 import { MainDBEntry } from "@/lib/db";
 import Styles from "./Cards.module.css"
 import Image from "next/image";
+import NormalBtn from "../Btn/NormalBtn";
 
 interface ProjectCardProps {
   textLeft: boolean;
   bgColor:"bg-[#f2f2ff]"|"bg-[#fdfdfd]";
   project:MainDBEntry["myProject"]["clientProjects"]["projects"][number]|MainDBEntry["myProject"]["personalProjects"]["projects"][number];
+  container?:"none";
+  btn?:true;
 }
 
-export default function ProjectCard({textLeft, bgColor,project}:ProjectCardProps) {
-
+export default function ProjectCard({textLeft, bgColor,project,container,btn}:ProjectCardProps) {
+  
   return (
-    <div className={`group w-[90%] m-auto shadow-[-10px_10px_10px_rgba(0,0,0,0.25)] rounded-[40px] p-[2rem] items-center ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)} ${bgColor} hover:bg-[#e5e5ff] transition-colors duration-300`}>
+    <div className={`group w-[90%] m-auto rounded-[40px] p-[2rem] items-center 
+    ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)}
+    ${bgColor}
+    ${container==="none"?("bg-transparent "):(`${bgColor} shadow-[-10px_10px_10px_rgba(0,0,0,0.25)] hover:bg-[#e5e5ff]`)}
+    transition-colors duration-300`}>
       {/* Image for phone */}
       <div className={`${Styles.phoneImg}`}>
         <Image
@@ -57,6 +64,13 @@ export default function ProjectCard({textLeft, bgColor,project}:ProjectCardProps
           />
         </div>
       </div>
+
+      {/* btn */}
+      {btn && 
+        <div className={`[grid-area:btn] justify-self-center ${Styles.btnArea}`}>
+          <NormalBtn text="detail"/>
+        </div>
+      }
     </div>
   );
 }
