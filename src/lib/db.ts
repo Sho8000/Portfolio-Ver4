@@ -68,6 +68,10 @@ export interface MainDBEntry {
     }[];
   };
   myProject: {
+    filter:{
+      filterTitle:string;
+      filterContents:string[];
+    };
     clientProjects:{
       projectTypeName:string;
       projects:{
@@ -193,6 +197,10 @@ export const MainDBEng:MainDBEntry[] = [
       ]
     },
     myProject:{
+      filter:{
+        filterTitle:"Filter",
+        filterContents:["all pojects","client projects", "personal projects"],
+      },
       clientProjects:{
         projectTypeName:"Client Projects",
         projects:[
@@ -370,6 +378,10 @@ export const MainDBJpn:MainDBEntry[] = [
       ]
     },
     myProject:{
+      filter:{
+        filterTitle:"フィルター",
+        filterContents:["全ての案件","顧客案件", "個人プロジェクト"],
+      },
       clientProjects:{
         projectTypeName:"顧客案件",
         projects:[

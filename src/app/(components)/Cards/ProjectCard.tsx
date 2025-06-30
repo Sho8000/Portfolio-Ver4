@@ -2,17 +2,19 @@ import { MainDBEntry } from "@/lib/db";
 import Styles from "./Cards.module.css"
 import Image from "next/image";
 import NormalBtn from "../Btn/NormalBtn";
+import { usePathname } from "next/navigation";
 
 interface ProjectCardProps {
   textLeft: boolean;
-  bgColor:"bg-[#f2f2ff]"|"bg-[#fdfdfd]";
+  bgColor?:"bg-[#f2f2ff]"|"bg-[#fdfdfd]";
   project:MainDBEntry["myProject"]["clientProjects"]["projects"][number]|MainDBEntry["myProject"]["personalProjects"]["projects"][number];
   container?:"none";
   btn?:true;
 }
 
 export default function ProjectCard({textLeft, bgColor,project,container,btn}:ProjectCardProps) {
-  
+  const pathName = usePathname  ();
+
   return (
     <div className={`group w-[90%] m-auto rounded-[40px] p-[2rem] items-center 
     ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)}
@@ -43,21 +45,21 @@ export default function ProjectCard({textLeft, bgColor,project,container,btn}:Pr
       <div className={`relative [grid-area:pic]  ${textLeft?("order-3"):("order-1")} ${Styles.ImageForPC}`}>
         <Image
           className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
-          src={project.imagePC}
+          src={pathName==="/myprojects"? project.imagePCFull : project.imagePC}
           alt="projectImage"
           width={400}
           height={400}
         />
         <Image
           className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          src={project.imagePCHover}
+          src={pathName==="/myprojects"? project.imagePCFullHover : project.imagePCHover}
           alt="projectImage"
           width={400}
           height={400}
         />
         <div className="invisible">
           <Image
-            src={project.imagePCHover}
+            src={pathName==="/myprojects"? project.imagePCFullHover : project.imagePCHover}
             alt="projectImage"
             width={400}
             height={400}
