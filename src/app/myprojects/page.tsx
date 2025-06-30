@@ -1,12 +1,20 @@
 "use client"
 import { useLangStore } from "@/store/useLangStore";
 import ProjectCard from "../(components)/Cards/ProjectCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MyProject() {
   const {data} = useLangStore();
-  const [filter, setFilter] = useState("all project")
+  const [filter, setFilter] = useState("all projects")
   const projects = data.myProject
+
+  useEffect(()=>{
+    if(data.myProject.clientProjects.projectTypeName === "client projects"){
+      setFilter("all project")      
+    } else {
+      setFilter("全ての案件")
+    }
+  },[data]);
 
   const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setFilter(event.target.value);
