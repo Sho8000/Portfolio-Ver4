@@ -442,7 +442,7 @@ export const MainDBJpn:MainDBEntry[] = [
           },  
         ]
       },
-      buttonText:"Detail",
+      buttonText:"詳細",
     },
     contactMe:{
       title:"お気軽にご相談を",

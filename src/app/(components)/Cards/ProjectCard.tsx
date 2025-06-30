@@ -9,10 +9,10 @@ interface ProjectCardProps {
   bgColor?:"bg-[#f2f2ff]"|"bg-[#fdfdfd]";
   project:MainDBEntry["myProject"]["clientProjects"]["projects"][number]|MainDBEntry["myProject"]["personalProjects"]["projects"][number];
   container?:"none";
-  btn?:true;
+  btnText?:string;
 }
 
-export default function ProjectCard({textLeft, bgColor,project,container,btn}:ProjectCardProps) {
+export default function ProjectCard({textLeft, bgColor,project,container,btnText}:ProjectCardProps) {
   const pathName = usePathname  ();
 
   return (
@@ -67,9 +67,9 @@ export default function ProjectCard({textLeft, bgColor,project,container,btn}:Pr
       </div>
 
       {/* btn */}
-      {btn && 
+      {btnText && 
         <div className={`[grid-area:btn] justify-self-center ${Styles.btnArea} ${pathName==="/myprojects"&&(Styles.orderProjectPhone4)}`}>
-          <NormalBtn text="detail"/>
+          <NormalBtn text={btnText}/>
         </div>
       }
     </div>
