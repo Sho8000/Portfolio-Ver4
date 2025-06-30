@@ -18,11 +18,10 @@ export default function ProjectCard({textLeft, bgColor,project,container,btn}:Pr
   return (
     <div className={`group w-[90%] m-auto rounded-[40px] p-[2rem] items-center 
     ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)}
-    ${bgColor}
     ${container==="none"?("bg-transparent "):(`${bgColor} shadow-[-10px_10px_10px_rgba(0,0,0,0.25)] hover:bg-[#e5e5ff]`)}
     transition-colors duration-300`}>
       {/* Image for phone */}
-      <div className={`${Styles.phoneImg}`}>
+      <div className={`${Styles.phoneImg} ${pathName==="/myprojects"&&(Styles.orderProjectPhone2)}`}>
         <Image
           src={project.imagePhone}
           alt="Phone Image"
@@ -32,11 +31,11 @@ export default function ProjectCard({textLeft, bgColor,project,container,btn}:Pr
       </div>
 
       {/* Text Area */}
-      <div className="flex flex-col justify-center h-[100%] border-b-1 border-gray-500">
+      <div className={`flex flex-col justify-center h-[100%] border-b-1 border-gray-500 ${pathName==="/myprojects"&&(Styles.orderProjectPhone1)}`}>
         <h2 className={`${Styles.projectName} font-bold`}>{project.projectName}</h2>
         <p className={`${Styles.subTitle}`}>{project.projectType}</p>
       </div>
-      <div className="flex flex-col justify-center">
+      <div className={`flex flex-col justify-center ${pathName==="/myprojects"&&(Styles.orderProjectPhone3)}`}>
         <h2 className={`${Styles.projectName} font-bold`}>Technologies</h2>
         <p className={`${Styles.subTitle}`}>{project.technologies}</p>
       </div>
@@ -69,7 +68,7 @@ export default function ProjectCard({textLeft, bgColor,project,container,btn}:Pr
 
       {/* btn */}
       {btn && 
-        <div className={`[grid-area:btn] justify-self-center ${Styles.btnArea}`}>
+        <div className={`[grid-area:btn] justify-self-center ${Styles.btnArea} ${pathName==="/myprojects"&&(Styles.orderProjectPhone4)}`}>
           <NormalBtn text="detail"/>
         </div>
       }

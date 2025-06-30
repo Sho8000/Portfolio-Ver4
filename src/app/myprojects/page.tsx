@@ -25,7 +25,7 @@ export default function MyProject() {
             </select>
           </div>
 
-          {filter==="personal projects" ||
+          {(filter==="personal projects" || filter === "個人プロジェクト") ||
             <>
               {projects.clientProjects.projects.map((item,index)=>{
                 if(index%2===0){
@@ -39,7 +39,7 @@ export default function MyProject() {
               })}
             </>
           }
-          {filter==="client projects" ||
+          {(filter==="client projects" || filter==="顧客案件") ||
             <>
             {projects.personalProjects.projects.map((item,index)=>{
               if(index%2===1){

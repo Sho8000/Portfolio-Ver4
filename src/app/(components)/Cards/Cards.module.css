@@ -90,6 +90,20 @@
   .btnArea{
     width: 80%;
   }
+
+  .orderProjectPhone1{
+    order: 1;
+    border-bottom: 0;
+  }
+  .orderProjectPhone2{
+    order: 2;
+  }
+  .orderProjectPhone3{
+    order: 3;
+  }
+  .orderProjectPhone4{
+    order: 4;
+  }
 }
 
 @media only screen and (max-width:550px){
