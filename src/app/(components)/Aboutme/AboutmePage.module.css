@@ -1,0 +1,74 @@
+/* Text responsive */
+@media only screen and (min-width:1441px){
+  .titleFont{
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 96px;
+    margin-bottom: 2rem;
+  }
+  .skillTypeFont{
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .commentSizeBold{
+    font-size: 52px;
+  }
+  .commentSize{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .titleFont{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    margin-bottom: 1rem;
+  }
+  .skillTypeFont{
+    font-size: 34px;
+    font-weight: 700;
+  }
+  .commentSizeBold{
+    font-size: 44px;
+  }
+  .commentSize{
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .titleFont{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 0.5rem;
+  }
+  .skillTypeFont{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .commentSizeBold{
+    font-size: 24px;
+  }
+  .commentSize{
+    font-size: 16px;
+  }
+}
+
+/* Layout Responsive */
+@media only screen and (min-width:1001px){
+  .container{
+    width: 90%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  .container{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}

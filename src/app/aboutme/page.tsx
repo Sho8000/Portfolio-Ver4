@@ -1,11 +1,14 @@
 "use client"
-import { usePathname } from "next/navigation";
+
+import AboutmeIAm from "../(components)/Aboutme/Aboutme";
+import Skills from "../(components)/Aboutme/Skills";
 
 export default function AboutMe() {
   return (
     <>
-      <section className="bg-pink-500 w-[100%] h-[100vh]">
-        <h1>This is {usePathname()}</h1>
+      <section className="w-[100%] h-auto" style={{ fontFamily: "var(--font-caveat), cursive" }}>
+        <AboutmeIAm/>
+        <Skills/>
       </section>
     </>
   );
