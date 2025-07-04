@@ -73,8 +73,10 @@ export interface MainDBEntry {
     aboutTitles: string[];
     skills: {
       skillType: string;
-      skillName: string[];
-      skillImage: StaticImageData[];
+      skillList:{
+          skillName:string,
+          skillImage:StaticImageData,
+        }[];
     }[];
     experiences: {
       experiencesTitle: string;
@@ -172,23 +174,103 @@ export const MainDBEng:MainDBEntry[] = [
       skills:[
         {
           skillType:"Frontend Frameworks & UI Libraries",
-          skillName:["React.js","Next.js","Redux","Zustand","Tailwind CSS","Bootstrap","Framer Motion","GSAP","Radix UI"],
-          skillImage:[ReactImg,NextJSImg,ReduxImg,ZustandImg,TailwindImg,FramerMotionImg,GSAPImg],
+          skillList:[
+            {
+              skillName:"React.js",
+              skillImage:ReactImg,
+            },
+            {
+              skillName:"Next.js",
+              skillImage:NextJSImg,
+            },
+            {
+              skillName:"Redux",
+              skillImage:ReduxImg,
+            },
+            {
+              skillName:"Zustand",
+              skillImage:ZustandImg,
+            },
+            {
+              skillName:"Tailwind CSS",
+              skillImage:TailwindImg,
+            },
+            {
+              skillName:"Bootstrap",
+              skillImage:NextJSImg,
+            },
+            {
+              skillName:"Framer Motion",
+              skillImage:FramerMotionImg,
+            },
+            {
+              skillName:"GSAP",
+              skillImage:GSAPImg,
+            },
+            {
+              skillName:"Radix UI",
+              skillImage:NextJSImg,
+            },
+          ]
         },
         {
           skillType:"Backend & Server Technologies",
-          skillName:["Node.js","Express","NextAuth(authentication on server-side)","Prisma","mongoose"],
-          skillImage:[NodeJSImg,ExpressImg,NextAuthImg],
+          skillList:[
+            {
+              skillName:"Node.js",
+              skillImage:NodeJSImg,
+            },
+            {
+              skillName:"Express",
+              skillImage:ExpressImg,
+            },
+            {
+              skillName:"NextAuth(authentication on server-side)",
+              skillImage:NextAuthImg,
+            },
+            {
+              skillName:"Prisma",
+              skillImage:NodeJSImg,
+            },
+            {
+              skillName:"mongoose",
+              skillImage:NodeJSImg,
+            },
+          ]
         },
         {
           skillType:"Databases & Data Storage",
-          skillName:["MongoDB","PostgreSQL","Amazon S3"],
-          skillImage:[MongoDBImg],
+          skillList:[
+            {
+              skillName:"MongoDB",
+              skillImage:MongoDBImg,
+            },
+            {
+              skillName:"PostgreSQL",
+              skillImage:MongoDBImg,
+            },
+            {
+              skillName:"AmazonS3",
+              skillImage:MongoDBImg,
+            },
+          ]
         },
         {
           skillType:"Deployment, CMS & Services",
-          skillName:["Contentful CMS", "Vercel","Netlify"],
-          skillImage:[ContentfulCMSImg,VercelImg,NetlifyImg],
+          skillList:[
+            {
+              skillName:"Contentful CMS",
+              skillImage:ContentfulCMSImg,
+            },
+            {
+              skillName:"Vercel",
+              skillImage:VercelImg,
+            },
+            {
+              skillName:"Netlify",
+              skillImage:NetlifyImg,
+            },
+          ]
         },
       ],
       experiences:[
@@ -353,23 +435,103 @@ export const MainDBJpn:MainDBEntry[] = [
       skills:[
         {
           skillType:"Frontend Frameworks & UI Libraries",
-          skillName:["React.js","Next.js","Redux","Zustand","Tailwind CSS","Bootstrap","Framer Motion","GSAP","Radix UI"],
-          skillImage:[ReactImg,NextJSImg,ReduxImg,ZustandImg,TailwindImg,FramerMotionImg,GSAPImg],
+          skillList:[
+            {
+              skillName:"React.js",
+              skillImage:ReactImg,
+            },
+            {
+              skillName:"Next.js",
+              skillImage:NextJSImg,
+            },
+            {
+              skillName:"Redux",
+              skillImage:ReduxImg,
+            },
+            {
+              skillName:"Zustand",
+              skillImage:ZustandImg,
+            },
+            {
+              skillName:"Tailwind CSS",
+              skillImage:TailwindImg,
+            },
+            {
+              skillName:"Bootstrap",
+              skillImage:NextJSImg,
+            },
+            {
+              skillName:"Framer Motion",
+              skillImage:FramerMotionImg,
+            },
+            {
+              skillName:"GSAP",
+              skillImage:GSAPImg,
+            },
+            {
+              skillName:"Radix UI",
+              skillImage:NextJSImg,
+            },
+          ]
         },
         {
           skillType:"Backend & Server Technologies",
-          skillName:["Node.js","Express","NextAuth(authentication on server-side)","Prisma","mongoose"],
-          skillImage:[NodeJSImg,ExpressImg,NextAuthImg],
+          skillList:[
+            {
+              skillName:"Node.js",
+              skillImage:NodeJSImg,
+            },
+            {
+              skillName:"Express",
+              skillImage:ExpressImg,
+            },
+            {
+              skillName:"NextAuth(authentication on server-side)",
+              skillImage:NextAuthImg,
+            },
+            {
+              skillName:"Prisma",
+              skillImage:NodeJSImg,
+            },
+            {
+              skillName:"mongoose",
+              skillImage:NodeJSImg,
+            },
+          ]
         },
         {
           skillType:"Databases & Data Storage",
-          skillName:["MongoDB","PostgreSQL","Amazon S3"],
-          skillImage:[MongoDBImg],
+          skillList:[
+            {
+              skillName:"MongoDB",
+              skillImage:MongoDBImg,
+            },
+            {
+              skillName:"PostgreSQL",
+              skillImage:MongoDBImg,
+            },
+            {
+              skillName:"AmazonS3",
+              skillImage:MongoDBImg,
+            },
+          ]
         },
         {
           skillType:"Deployment, CMS & Services",
-          skillName:["Contentful CMS", "Vercel","Netlify"],
-          skillImage:[ContentfulCMSImg,VercelImg,NetlifyImg],
+          skillList:[
+            {
+              skillName:"Contentful CMS",
+              skillImage:ContentfulCMSImg,
+            },
+            {
+              skillName:"Vercel",
+              skillImage:VercelImg,
+            },
+            {
+              skillName:"Netlify",
+              skillImage:NetlifyImg,
+            },
+          ]
         },
       ],
       experiences:[
@@ -496,3 +658,31 @@ export const MainDBJpn:MainDBEntry[] = [
     }
   }
 ]
+
+
+
+/* 
+      skills:[
+        {
+          skillType:"Frontend Frameworks & UI Libraries",
+          skillName:["React.js","Next.js","Redux","Zustand","Tailwind CSS","Bootstrap","Framer Motion","GSAP","Radix UI"],
+          skillImage:[ReactImg,NextJSImg,ReduxImg,ZustandImg,TailwindImg,FramerMotionImg,GSAPImg],
+        },
+        {
+          skillType:"Backend & Server Technologies",
+          skillName:["Node.js","Express","NextAuth(authentication on server-side)","Prisma","mongoose"],
+          skillImage:[NodeJSImg,ExpressImg,NextAuthImg],
+        },
+        {
+          skillType:"Databases & Data Storage",
+          skillName:["MongoDB","PostgreSQL","Amazon S3"],
+          skillImage:[MongoDBImg],
+        },
+        {
+          skillType:"Deployment, CMS & Services",
+          skillName:["Contentful CMS", "Vercel","Netlify"],
+          skillImage:[ContentfulCMSImg,VercelImg,NetlifyImg],
+        },
+      ],
+
+*/

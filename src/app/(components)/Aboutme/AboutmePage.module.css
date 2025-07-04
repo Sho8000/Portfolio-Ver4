@@ -16,6 +16,12 @@
   .commentSize{
     font-size: 40px;
   }
+  .imageSize{
+    width: 120px;
+  }
+  .imagePosition{
+    margin-left: -60px;
+  }
 }
 
 @media only screen and (max-width:1440px){
@@ -35,6 +41,13 @@
   .commentSize{
     font-size: 28px;
   }
+  .imageSize{
+    width: 90px;
+    height: 90px;
+  }
+  .imagePosition{
+    margin-left: -45px;
+  }
 }
 
 @media only screen and (max-width:430px){
@@ -53,6 +66,13 @@
   }
   .commentSize{
     font-size: 16px;
+  }
+  .imageSize{
+    width: 60px;
+    height: 60px;
+  }
+  .imagePosition{
+    margin-left: -30px;
   }
 }
 

@@ -3,11 +3,17 @@
 import Image from "next/image";
 import Styles from "./AboutmePage.module.css"
 import { useLangStore } from "@/store/useLangStore";
+import { useState } from "react";
 
 export default function Skills() {
   const {data} = useLangStore();
   const aboutMe = data.aboutMe;
+  const [hoveredSkill,setHoveredSkill] = useState<string|null>(null);
   
+  const handleActivate = (skillName:string) => {
+    setHoveredSkill(skillName);
+  };
+
   return (
     <section className="w-[100%]">
       <div className={`flex flex-col items-center text-center m-auto ${Styles.container}`}>
@@ -15,21 +21,33 @@ export default function Skills() {
 
         <ul className={`list-decimal text-left w-[90%] m-auto`}>
           {aboutMe.skills.map((item,index)=>{
-            return <li key={index} className={`${Styles.skillTypeFont}`}>{item.skillType}
+            return <li key={index} className={`${Styles.skillTypeFont} mb-[2rem]`}>{item.skillType}
 
-            <p className={`${Styles.commentSize} font-medium`}>{item.skillName.join(", ")}</p>
-            <div className="flex w-[100%]">
-              {item.skillImage.map((image,imageIndex)=>{return <Image
-                key={`img_${imageIndex}`}
-                className={imageIndex !== 0 ? "-ml-[50px]" : ""}
-                src={image}
-                alt="skillImage"
-                loading="eager"
-                width={100}
-                height={100}
-              />
+            <p className={`font-medium ${Styles.commentSize}`}>
+              {item.skillList.map((skill,skillIndex)=>{
+                if(item.skillList.length-1!==skillIndex){
+                  return  <span key={`skillName_${skillIndex}`} className={hoveredSkill===skill.skillName?(`font-bold text-red-600`):(``)}>{skill.skillName}, </span>
+                } else {
+                  return <span key={`skillName_${skillIndex}`} className={hoveredSkill===skill.skillName?(`font-bold text-red-600`):(``)}>{skill.skillName}</span>
+                }
               })}
-            </div>
+            </p>
+
+            <div className="flex w-[100%]">
+                {item.skillList.map((image,imageIndex)=>{
+                  return <Image
+                  key={`img_${imageIndex}`}
+                  onMouseEnter={() => setHoveredSkill(image.skillName)}
+                  onMouseLeave={() => setHoveredSkill(null)}
+                  onTouchStart={() => handleActivate(image.skillName)}                  className={`${imageIndex !== 0 ? Styles.imagePosition : ""} ${Styles.imageSize} ${hoveredSkill===image.skillName?("z-20 scale-[1.2] transition-transform duration-300"):("")} z-10`}
+                  src={image.skillImage}
+                  alt="skillImage"
+                  loading="eager"
+                  width={100}
+                  height={100}
+                />
+                })}
+              </div>
             </li>
           })}
         </ul>
