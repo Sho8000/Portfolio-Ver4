@@ -1,6 +1,7 @@
 "use client"
 
 import AboutmeIAm from "../(components)/Aboutme/Aboutme";
+import Experiences from "../(components)/Aboutme/Experiences";
 import Skills from "../(components)/Aboutme/Skills";
 
 export default function AboutMe() {
@@ -9,6 +10,7 @@ export default function AboutMe() {
       <section className="w-[100%] h-auto" style={{ fontFamily: "var(--font-caveat), cursive" }}>
         <AboutmeIAm/>
         <Skills/>
+        <Experiences/>
       </section>
     </>
   );

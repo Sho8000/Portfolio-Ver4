@@ -19,7 +19,7 @@ export default function Skills() {
       <div className={`flex flex-col items-center text-center m-auto ${Styles.container}`}>
         <h2 className={`${Styles.titleFont}`} style={{ fontFamily: "var(--font-caveat), cursive" }}>{aboutMe.aboutTitles[0]}</h2>
 
-        <ul className={`list-decimal text-left w-[90%] m-auto`}>
+        <ul className={`list-disc text-left w-[90%] ml-[1rem]`}>
           {aboutMe.skills.map((item,index)=>{
             return <li key={index} className={`${Styles.skillTypeFont} mb-[2rem]`}>{item.skillType}
 
