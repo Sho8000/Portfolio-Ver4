@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <>
       {pathName!=="/contactme" &&
-        <footer className={`relative w-[100%] ${Styles.footerSize} bg-[#f2f2ff] overflow-hidden`}>
+        <footer className={`relative w-[100%] ${Styles.footerSize} overflow-hidden`}>
           <div className={`absolute z-10 w-[100%] ${Styles.titleFont} top-[50%] translate-y-[-50%]`}>
             <h1 className={`text-white text-center mb-[1rem]`}>{footer.footerText}</h1>
             <div className="flex justify-center gap-[2rem]">
