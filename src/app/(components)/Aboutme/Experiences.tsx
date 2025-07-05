@@ -2,6 +2,7 @@
 
 import Styles from "./AboutmePage.module.css"
 import { useLangStore } from "@/store/useLangStore";
+import Link from "next/link";
 
 export default function Experiences() {
   const {data} = useLangStore();
@@ -17,10 +18,20 @@ export default function Experiences() {
             return <li key={index} className={`${Styles.skillTypeFont} mb-[2rem]`}>{item.experiencesTitle}
               <p className={`font-medium ${Styles.commentSize}`}>
                 {item.contents.map((content,contentIndex)=>{
-                  return <span key={`content_${contentIndex}`} className={`
-                    ${item.contentsStringType[contentIndex]==="normal"?(""):(Styles.skillTypeFont)}
-                    ${item.contentsStringType[contentIndex]==="link"?("underline text-blue-600"):("")}
-                    `}>{content} </span>
+                  if(content==="My Projects"){
+                    return <Link 
+                      key={`content_${contentIndex}`}
+                      href={"/myprojects"}
+                      className={`
+                      ${Styles.skillTypeFont}
+                      underline text-blue-600`}
+                    >{content} </Link>
+                  } else {
+                    return <span key={`content_${contentIndex}`} className={`
+                      ${item.contentsStringType[contentIndex]==="normal"?(""):(Styles.skillTypeFont)}
+                      `}
+                    >{content} </span>
+                  }
                 })}
               </p>
             </li>
