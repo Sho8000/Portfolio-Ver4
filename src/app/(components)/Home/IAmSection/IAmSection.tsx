@@ -8,7 +8,7 @@ export default function IAM() {
   const {data} = useLangStore();
   
   return (
-    <section className="w-[100%] bg-[#f2f2ff]">
+    <section className="w-[100%] bg-[linear-gradient(to_bottom,_#f2f2ff_0%,_#f2f2ff_98%,_rgba(242,242,255,0)_100%)]">
       <div className={`flex w-[100%] ${Styles.container}`}>
         <h1 className={`${Styles.titleForPhone} ${Styles.titleFont}`}>{data.landing.lading_titles[0]}</h1>
         <div className={`relative ${Styles.imageArea}`}>

@@ -102,6 +102,7 @@
     width: 90%;
     text-align: center;
     margin: 0 auto 2rem;
+    padding-bottom: 2rem;
     .titleForPC{
       display: none;
     }
