@@ -50,7 +50,7 @@ export default function Contactme() {
   }
 
   return (
-    <section className={`w-[100%] min-h-[70vh] flex items-center justify-center bg-[#f2f2ff] ${Styles.sectionResponsive}`}>
+    <section className={`w-[100%] min-h-[70vh] flex items-center justify-center bg-[linear-gradient(to_bottom,_rgba(242,242,255,0)_0%,_#f2f2ff_2%,_#f2f2ff_100%)] ${Styles.sectionResponsive}`}>
       <div>
         <div className={`text-center ${Styles.titleContainer}`}>
           <h2 className={`${Styles.mainFont} ${Styles.titleArea}`}>{contactData.title}</h2>
