@@ -36,18 +36,18 @@ import NextJSImg from "@/../public/About/Skills/NextJS_Logo_90_90.png"
 import ReduxImg from "@/../public/About/Skills/Redux_Logo_90_90.png"
 import ZustandImg from "@/../public/About/Skills/Zustand_Logo_90_90.png"
 import TailwindImg from "@/../public/About/Skills/Tailwind_Logo_90_90.png"
-//import BootstrapImg from "@/../public/About/Skills/Bootstrap"
+import BootstrapImg from "@/../public/About/Skills/Bootstrap_Logo_90_90.png"
 import FramerMotionImg from "@/../public/About/Skills/FramerMotion_Logo_90_90.png"
 import GSAPImg from "@/../public/About/Skills/GSAP_Logo_90_90.png"
-//import RadixImg from "@/../public/About/Skills/Zustand_Logo_90_90.png"
+import RadixImg from "@/../public/About/Skills/RadixUI_Logo_90_90.png"
 import NodeJSImg from "@/../public/About/Skills/NodeJS_Logo_90_90.png"
 import ExpressImg from "@/../public/About/Skills/Expless_Logo_90_90.png"
 import NextAuthImg from "@/../public/About/Skills/NextAuth_Logo_90_90.png"
-//import PrismaImg from "@/../public/About/Skills/Pr_Logo_90_90.png"
-//import MongooseImg from "@/../public/About/Skills/GSAP_Logo_90_90.png"
+import PrismaImg from "@/../public/About/Skills/Prisma_Logo_90_90.png"
+import MongooseImg from "@/../public/About/Skills/Mongoose_Logo_90_90.png"
 import MongoDBImg from "@/../public/About/Skills/MongoDB_Logo_90_90.png"
-//import PostgreSQLImg from "@/../public/About/Skills/Postgre_Logo_90_90.png"
-//import AmazonS3Img from "@/../public/About/Skills/GSAP_Logo_90_90.png"
+import PostgreSQLImg from "@/../public/About/Skills/PostgreSQL_Logo_90_90.png"
+import AmazonS3Img from "@/../public/About/Skills/AmazonS3_Logo_90_90.png"
 import ContentfulCMSImg from "@/../public/About/Skills/CMS_Logo_90_90.png"
 import VercelImg from "@/../public/About/Skills/Vercel_Logo_90_90.png"
 import NetlifyImg from "@/../public/About/Skills/Netlify_90_90.png"
@@ -197,7 +197,7 @@ export const MainDBEng:MainDBEntry[] = [
             },
             {
               skillName:"Bootstrap",
-              skillImage:NextJSImg,
+              skillImage:BootstrapImg,
             },
             {
               skillName:"Framer Motion",
@@ -209,7 +209,7 @@ export const MainDBEng:MainDBEntry[] = [
             },
             {
               skillName:"Radix UI",
-              skillImage:NextJSImg,
+              skillImage:RadixImg,
             },
           ]
         },
@@ -230,11 +230,11 @@ export const MainDBEng:MainDBEntry[] = [
             },
             {
               skillName:"Prisma",
-              skillImage:NodeJSImg,
+              skillImage:PrismaImg,
             },
             {
               skillName:"mongoose",
-              skillImage:NodeJSImg,
+              skillImage:MongooseImg,
             },
           ]
         },
@@ -247,11 +247,11 @@ export const MainDBEng:MainDBEntry[] = [
             },
             {
               skillName:"PostgreSQL",
-              skillImage:MongoDBImg,
+              skillImage:PostgreSQLImg,
             },
             {
               skillName:"AmazonS3",
-              skillImage:MongoDBImg,
+              skillImage:AmazonS3Img,
             },
           ]
         },
@@ -458,7 +458,7 @@ export const MainDBJpn:MainDBEntry[] = [
             },
             {
               skillName:"Bootstrap",
-              skillImage:NextJSImg,
+              skillImage:BootstrapImg,
             },
             {
               skillName:"Framer Motion",
@@ -470,7 +470,7 @@ export const MainDBJpn:MainDBEntry[] = [
             },
             {
               skillName:"Radix UI",
-              skillImage:NextJSImg,
+              skillImage:RadixImg,
             },
           ]
         },
@@ -491,11 +491,11 @@ export const MainDBJpn:MainDBEntry[] = [
             },
             {
               skillName:"Prisma",
-              skillImage:NodeJSImg,
+              skillImage:PrismaImg,
             },
             {
               skillName:"mongoose",
-              skillImage:NodeJSImg,
+              skillImage:MongooseImg,
             },
           ]
         },
@@ -508,11 +508,11 @@ export const MainDBJpn:MainDBEntry[] = [
             },
             {
               skillName:"PostgreSQL",
-              skillImage:MongoDBImg,
+              skillImage:PostgreSQLImg,
             },
             {
               skillName:"AmazonS3",
-              skillImage:MongoDBImg,
+              skillImage:AmazonS3Img,
             },
           ]
         },
