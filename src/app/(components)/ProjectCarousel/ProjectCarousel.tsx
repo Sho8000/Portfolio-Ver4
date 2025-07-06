@@ -4,6 +4,7 @@ import { MainDBEntry } from "@/lib/db";
 import ProjectCard from "../Cards/ProjectCard";
 import LeftBtn from "../Btn/LeftBtn";
 import RightBtn from "../Btn/RightBtn";
+import Styles from "./ProjectCarousel.module.css"
 
 interface ProjectsProps {
   cardBG:"bg-[#f2f2ff]"|"bg-[#fdfdfd]"; 
@@ -36,14 +37,18 @@ export default function ProjectCarousel({cardBG,projectInfo,textLeft,container}:
 	}
 
   return (
-    <div className="w-[90%] m-auto">
+    <div className={`relative w-[90%] m-auto`}>
       <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]} container={container}/>
-      <div className="w-[90%] flex justify-between m-auto items-center py-[2rem]">
-        <div onClick={handlePrevious}>
+      <div className={`w-[90%] flex justify-between m-auto items-center ${Styles.arrowContainer}`}>
+        <div onClick={handlePrevious} className={`${Styles.arrowPositionLeft}`}>
           <LeftBtn/>
         </div>
-        <p>{currentPage}/{totalPage}</p>
-        <div onClick={handleNext}>
+        <p className={`w-[100%] text-center`}>
+          {projectInfo.map((_,index)=>{
+            return <span key={index} className={`${index===currentPage-1?(""):("text-gray-300")} ${Styles.dotSize}`}>●</span>
+          })}          
+        </p>
+        <div onClick={handleNext} className={`${Styles.arrowPositionRight}`}>
           <RightBtn/>
         </div>
       </div>

@@ -658,31 +658,3 @@ export const MainDBJpn:MainDBEntry[] = [
     }
   }
 ]
-
-
-
-/* 
-      skills:[
-        {
-          skillType:"Frontend Frameworks & UI Libraries",
-          skillName:["React.js","Next.js","Redux","Zustand","Tailwind CSS","Bootstrap","Framer Motion","GSAP","Radix UI"],
-          skillImage:[ReactImg,NextJSImg,ReduxImg,ZustandImg,TailwindImg,FramerMotionImg,GSAPImg],
-        },
-        {
-          skillType:"Backend & Server Technologies",
-          skillName:["Node.js","Express","NextAuth(authentication on server-side)","Prisma","mongoose"],
-          skillImage:[NodeJSImg,ExpressImg,NextAuthImg],
-        },
-        {
-          skillType:"Databases & Data Storage",
-          skillName:["MongoDB","PostgreSQL","Amazon S3"],
-          skillImage:[MongoDBImg],
-        },
-        {
-          skillType:"Deployment, CMS & Services",
-          skillName:["Contentful CMS", "Vercel","Netlify"],
-          skillImage:[ContentfulCMSImg,VercelImg,NetlifyImg],
-        },
-      ],
-
-*/

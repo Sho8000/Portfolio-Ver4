@@ -1,0 +1,44 @@
+@media only screen and (min-width:1441px){
+  .dotSize{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .dotSize{
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .dotSize{
+    font-size: 20px;
+  }
+}
+
+/* Layout Responsive */
+@media only screen and (min-width:1001px){
+  .arrowContainer{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  .arrowContainer{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  .arrowPositionLeft{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .arrowPositionRight{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
