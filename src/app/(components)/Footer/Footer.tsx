@@ -3,6 +3,7 @@ import { useLangStore } from "@/store/useLangStore";
 import Image from "next/image";
 import Styles from "./Footer.module.css"
 import { usePathname } from "next/navigation";
+import AnimationUpDown from "../Animation/UpDown";
 
 export default function Footer() {
   const pathName = usePathname();
@@ -21,16 +22,18 @@ export default function Footer() {
             <h1 className={`text-white text-center mb-[1rem]`}>{footer.footerText}</h1>
             <div className="flex justify-center gap-[2rem]">
               { footer.footerInfo.map((item,index)=>{
-                return <Image
-                  key={index}
-                  className={`${Styles.iconStyle}`}
-                  onClick={()=>{openLink(item.url)}}
-                  src={item.footerImges}
-                  alt={item.footerImgNames}
-                  width={100}
-                  height={100}
-                  priority
-                />
+                return <AnimationUpDown
+                key={index} delay={index}>
+                  <Image
+                    className={`${Styles.iconStyle}`}
+                    onClick={()=>{openLink(item.url)}}
+                    src={item.footerImges}
+                    alt={item.footerImgNames}
+                    width={100}
+                    height={100}
+                    priority
+                  />
+                  </AnimationUpDown>
                 })
               }
             </div>
@@ -44,16 +47,18 @@ export default function Footer() {
             <div className={`absolute z-10 w-[90%] ${Styles.titleFont} top-[50%] translate-y-[-50%]`}>
               <div className="flex justify-center gap-[2rem]">
                 { footer.footerInfo.map((item,index)=>{
-                  return <Image
-                    key={index}
-                    className={`${Styles.iconStyleForContact} `}
-                    onClick={()=>{openLink(item.url)}}
-                    src={item.footerImges}
-                    alt={item.footerImgNames}
-                    width={100}
-                    height={100}
-                    priority
-                  />
+                  return <AnimationUpDown
+                    key={index} delay={index}>
+                      <Image
+                        className={`${Styles.iconStyleForContact} `}
+                        onClick={()=>{openLink(item.url)}}
+                        src={item.footerImges}
+                        alt={item.footerImgNames}
+                        width={100}
+                        height={100}
+                        priority
+                      />
+                    </AnimationUpDown> 
                   })
                 }
               </div>
