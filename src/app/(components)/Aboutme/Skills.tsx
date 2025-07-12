@@ -3,13 +3,20 @@
 import Image from "next/image";
 import Styles from "./AboutmePage.module.css"
 import { useLangStore } from "@/store/useLangStore";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { upDownAnimation } from "@/lib/upDownAnimation";
+import { usePathname } from "next/navigation";
 
 export default function Skills() {
   const {data} = useLangStore();
   const aboutMe = data.aboutMe;
   const [hoveredSkill,setHoveredSkill] = useState<string|null>(null);
-  
+  const pathname = usePathname();
+
+  useEffect(() => {
+    upDownAnimation(".floatAnimation");
+  }, [pathname]);
+
   const handleActivate = (skillName:string) => {
     setHoveredSkill(skillName);
   };
@@ -39,7 +46,7 @@ export default function Skills() {
                   key={`img_${imageIndex}`}
                   onMouseEnter={() => setHoveredSkill(image.skillName)}
                   onMouseLeave={() => setHoveredSkill(null)}
-                  onTouchStart={() => handleActivate(image.skillName)}                  className={`${imageIndex !== 0 ? Styles.imagePosition : ""} ${Styles.imageSize} ${hoveredSkill===image.skillName?("z-20 scale-[1.2] transition-transform duration-300"):("")} z-10`}
+                  onTouchStart={() => handleActivate(image.skillName)}                  className={`floatAnimation ${imageIndex !== 0 ? Styles.imagePosition : ""} ${Styles.imageSize} ${hoveredSkill===image.skillName?("z-20 scale-[1.2] transition-transform duration-300"):("")} z-10`}
                   src={image.skillImage}
                   alt="skillImage"
                   loading="eager"
