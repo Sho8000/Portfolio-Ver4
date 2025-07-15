@@ -1,10 +1,11 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MainDBEntry } from "@/lib/db";
 import ProjectCard from "../Cards/ProjectCard";
 import LeftBtn from "../Btn/LeftBtn";
 import RightBtn from "../Btn/RightBtn";
 import Styles from "./ProjectCarousel.module.css"
+import { animateCardIn, animateCardOut } from "@/lib/slideCards";
 
 interface ProjectsProps {
   cardBG:"bg-[#f2f2ff]"|"bg-[#fdfdfd]"; 
@@ -15,30 +16,54 @@ interface ProjectsProps {
 
 export default function ProjectCarousel({cardBG,projectInfo,textLeft,container}:ProjectsProps) {
 	const [currentPage,setCurrentPage] = useState<number>(1);
-	const totalPage = projectInfo.length;
+  const directionRef = useRef<"left" | "right">("right");
+  
+  const cardRef = useRef<HTMLDivElement>(null);
+  const totalPage = projectInfo.length;
+
+  useEffect(() => {
+    const element = cardRef.current;
+    if (!element) return;
+  
+    animateCardIn(element, directionRef.current);
+  }, [currentPage]);
 
 	const handlePrevious = ()=>{
-		setCurrentPage((prev)=>{
-      if(prev===1){
-        return totalPage
-      } else {
-        return prev-1
-      }
+    const element = cardRef.current;
+    if (!element) return;
+
+    directionRef.current = "left";
+    animateCardOut(element, "left", () => {
+      setCurrentPage((prev)=>{
+        if(prev===1){
+          return totalPage
+        } else {
+          return prev-1
+        }
+      })
     })
 	}
 	const handleNext = ()=>{
-		setCurrentPage((next)=>{
-      if(next===totalPage){
-        return 1
-      } else {
-        return next+1
-      }
+    const element = cardRef.current;
+    if (!element) return;
+
+    directionRef.current = "right";
+    animateCardOut(element, "right", () => {
+      setCurrentPage((next)=>{
+        if(next===totalPage){
+          return 1
+        } else {
+          return next+1
+        }
+      })
     })
 	}
 
   return (
     <div className={`relative w-[90%] m-auto`}>
-      <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]} container={container}/>
+      <div ref={cardRef}>
+        <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]} container={container}/>
+      </div>
       <div className={`w-[90%] flex justify-between m-auto items-center ${Styles.arrowContainer}`}>
         <div onClick={handlePrevious} className={`${Styles.arrowPositionLeft}`}>
           <LeftBtn/>
