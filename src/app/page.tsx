@@ -6,11 +6,13 @@ export default function Home() {
 
   return (
     <>
-      <TitlePage/>
-      <IAM/>
-      
-      <ProjectsSection type="client" bgColor="bg-[#fdfdfd]" textLeft={true}/>
-      <ProjectsSection type="personal" bgColor="bg-[#f2f2ff]" textLeft={false}/>
+      <main className="overflow-hidden">
+        <TitlePage/>
+        <IAM/>
+        
+        <ProjectsSection type="client" bgColor="bg-[#fdfdfd]" textLeft={true}/>
+        <ProjectsSection type="personal" bgColor="bg-[#f2f2ff]" textLeft={false}/>
+      </main>
     </>
   );
 }
