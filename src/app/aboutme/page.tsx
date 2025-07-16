@@ -9,7 +9,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <section className="w-[100%] h-auto" style={{ fontFamily: "var(--font-caveat), cursive" }}>
+      <section className="w-[100%] h-auto">
         <AboutmeIAm/>
         <Skills/>
         <Experiences/>

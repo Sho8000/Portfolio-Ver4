@@ -167,7 +167,7 @@ export const MainDBEng:MainDBEntry[] = [
       myPic:MyPicture,
     },
     aboutMe:{
-      myName:"Sho Yoshimra",
+      myName:"Sho Yoshimura",
       selfIntroduction:["A", "full-stack developer", "with a strong focus on building fast, scalable web applications. I work mainly with", "React, TypeScript,", "and", "Next.js", "on the front end, and", "Node.js, Express, MongoDB,", "and", "PostgreSQL", "on the back end. I love turning ideas into clean, functional code and always aim for a great user experience."],
       selfIntroductionStringType:["normal","red","normal","bold","normal","bold","normal","bold","normal","bold","normal"],
       aboutTitles:["Skills","Experiences","What I provide,,,"],
@@ -428,9 +428,9 @@ export const MainDBJpn:MainDBEntry[] = [
       myPic:MyPicture,
     },
     aboutMe:{
-      myName:"Sho Yoshimra",
-      selfIntroduction:["A", "full-stack developer", "with a strong focus on building fast, scalable web applications. I work mainly with", "React, TypeScript,", "and", "Next.js", "on the front end, and", "Node.js, Express, MongoDB,", "and", "PostgreSQL", "on the back end. I love turning ideas into clean, functional code and always aim for a great user experience."],
-      selfIntroductionStringType:["normal","red","normal","bold","normal","bold","normal","bold","normal","bold","normal"],
+      myName:"Sho Yoshimura",
+      selfIntroduction:["高速でスケーラブルなWebアプリケーションの構築に注力する", "フルスタック開発者", "です。フロントエンドでは主に", "React、TypeScript、Next.js", "を使用し、バックエンドでは", "Node.js、Express、MongoDB、PostgreSQL", "を扱えます。アイデアをクリーンで機能的なコードへと変えることが好きで、常に優れたユーザー体験を目指しています。"],
+      selfIntroductionStringType:["normal","red","normal","bold","normal","bold","normal"],
       aboutTitles:["スキル","経験","What I provide,,,"],
       skills:[
         {
