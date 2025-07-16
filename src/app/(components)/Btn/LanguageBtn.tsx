@@ -10,7 +10,7 @@ export default function LanguageBtn({ onClick }: { onClick: () => void }) {
   return (
     <>
       {/* Large */}
-      <div className={`relative w-[155px] h-[52px] ${Styles.hideLarge}`} onClick={onClick}>
+      <div className={`relative w-[155px] h-[52px] ${Styles.hideLarge} cursor-pointer`} onClick={onClick}>
         <Image
           className="absolute"
           src={LangBtn}
@@ -22,7 +22,7 @@ export default function LanguageBtn({ onClick }: { onClick: () => void }) {
       </div>
 
       {/* Middle */}
-      <div className={`relative w-[120px] h-[41px] ${Styles.hideMiddle}`} onClick={onClick}>
+      <div className={`relative w-[120px] h-[41px] ${Styles.hideMiddle} cursor-pointer`} onClick={onClick}>
         <Image
           className="absolute"
           src={LangBtn}
@@ -34,7 +34,7 @@ export default function LanguageBtn({ onClick }: { onClick: () => void }) {
       </div>
 
       {/* Small */}
-      <div className={`relative w-[85px] h-[30px] ${Styles.hideSmall}`} onClick={onClick}>
+      <div className={`relative w-[85px] h-[30px] ${Styles.hideSmall} cursor-pointer`} onClick={onClick}>
         <Image
           className="absolute"
           src={LangBtn}

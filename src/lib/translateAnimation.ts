@@ -1,14 +1,14 @@
 import gsap from "gsap";
 
-type Direction = "left" | "right";
+type Direction = "left" | "right" | null;
 
 export function translateAnimateIn(
   element: HTMLDivElement,
   direction: Direction,
   onComplete: ()=>void,
 ) {
-  const startPosition = direction === "right" ? "0" : "-200%";
-  const endPosition = direction === "right" ? "-100%" : "-100%";
+  const startPosition = direction === "left" ? "0" : "-200%";
+  const endPosition = direction === "left" ? "-100%" : "-100%";
 
   gsap.fromTo(
     element,
@@ -32,8 +32,8 @@ export function translateAnimateOut(
   element: HTMLDivElement,
   direction: Direction,
 ) {
-  const startPosition = direction === "right" ? "-100%" : "-100%";
-  const endPosition = direction === "right" ? "-200%" : "0%";
+  const startPosition = direction === "left" ? "-100%" : "-100%";
+  const endPosition = direction === "left" ? "-200%" : "0%";
 
   gsap.fromTo(
     element,

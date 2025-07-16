@@ -16,18 +16,23 @@ export default function Navbar() {
   const pathName = usePathname();
   const haveHeight = pathName==="/"?true:false;
   const translateAnimateWallRef = useRef<HTMLDivElement>(null)
-  const translateAnimeteRef = useRef<"left" | "right">("right");
+  const translateAnimateRef = useRef<"left" | "right"|null>(null);
   useEffect(()=>{
     if(!translateAnimateWallRef.current) return;
+    if(!translateAnimateRef.current) return;
 
-    translateAnimateOut(translateAnimateWallRef.current,translateAnimeteRef.current)
-    translateAnimeteRef.current =
-    translateAnimeteRef.current === "right" ? "left":"right";
+    translateAnimateOut(translateAnimateWallRef.current,translateAnimateRef.current)
+    translateAnimateRef.current =
+    translateAnimateRef.current === "right" ? "left":"right";
   },[data])
 
   const langBtnClickHandler = () => {
     if(!translateAnimateWallRef.current) return;
-    translateAnimateIn(translateAnimateWallRef.current,translateAnimeteRef.current,changeLanguage)
+    if(!translateAnimateRef.current){
+      translateAnimateRef.current = "left"
+    };
+
+    translateAnimateIn(translateAnimateWallRef.current,translateAnimateRef.current,changeLanguage)
   }
 
   return (

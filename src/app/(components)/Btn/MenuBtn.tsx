@@ -11,7 +11,7 @@ export default function MenuBtn() {
   return (
     <>
       {/* Large */}
-      <button className={`${Styles.hideLarge}`} onClick={hbgBtnHandler}>
+      <button className={`${Styles.hideLarge} cursor-pointer`} onClick={hbgBtnHandler}>
         <svg width="100" height="100">
           <circle cx={50} cy={50} r={50} fill="black" opacity="80%"/>
           <rect x="25" y="27" rx="1" ry="1" width="50" height="2"
@@ -24,7 +24,7 @@ export default function MenuBtn() {
       </button>
 
       {/* Middle */}
-      <button className={`${Styles.hideMiddle}`} onClick={hbgBtnHandler}>
+      <button className={`${Styles.hideMiddle} cursor-pointer`} onClick={hbgBtnHandler}>
         <svg width="80" height="80">
           <circle cx={40} cy={40} r={40} fill="black" opacity="80%"/>
           <rect x="20" y="22" rx="1" ry="1" width="40" height="2"
@@ -37,7 +37,7 @@ export default function MenuBtn() {
       </button>
 
       {/* Small */}
-      <button className={`${Styles.hideSmall}`} onClick={hbgBtnHandler}>
+      <button className={`${Styles.hideSmall} cursor-pointer`} onClick={hbgBtnHandler}>
         <svg width="60" height="60">
           <circle cx={30} cy={30} r={30} fill="black" opacity="80%"/>
           <rect x="14" y="15" rx="1" ry="1" width="32" height="2"
