@@ -4,13 +4,13 @@ import Image from "next/image";
 import LangBtn from "@/../public/NavImages/LanguageBtnImg.png"
 import { useLangStore } from "@/store/useLangStore";
 
-export default function LanguageBtn() {
-  const { data, changeLanguage } = useLangStore();
+export default function LanguageBtn({ onClick }: { onClick: () => void }) {
+  const { data } = useLangStore();
   
   return (
     <>
       {/* Large */}
-      <div className={`relative w-[155px] h-[52px] ${Styles.hideLarge}`} onClick={changeLanguage}>
+      <div className={`relative w-[155px] h-[52px] ${Styles.hideLarge}`} onClick={onClick}>
         <Image
           className="absolute"
           src={LangBtn}
@@ -22,7 +22,7 @@ export default function LanguageBtn() {
       </div>
 
       {/* Middle */}
-      <div className={`relative w-[120px] h-[41px] ${Styles.hideMiddle}`} onClick={changeLanguage}>
+      <div className={`relative w-[120px] h-[41px] ${Styles.hideMiddle}`} onClick={onClick}>
         <Image
           className="absolute"
           src={LangBtn}
@@ -34,7 +34,7 @@ export default function LanguageBtn() {
       </div>
 
       {/* Small */}
-      <div className={`relative w-[85px] h-[30px] ${Styles.hideSmall}`} onClick={changeLanguage}>
+      <div className={`relative w-[85px] h-[30px] ${Styles.hideSmall}`} onClick={onClick}>
         <Image
           className="absolute"
           src={LangBtn}
