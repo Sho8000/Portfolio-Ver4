@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div ref={translateAnimateWallRef} className="fixed w-[100vw] h-[100vh] z-50 bg-[#2E3A59]/80 backdrop-blur-sm left-[-100%] top-0"></div>
+      <div ref={translateAnimateWallRef} className="fixed w-[100vw] h-[100vh] z-50 bg-[#2E3A59]/80 backdrop-blur-sm left-[100%] top-0"></div>
       <nav className={`fixed z-40 w-[90%] flex items-center gap-[2rem] mt-[1rem] left-[50%] translate-x-[-50%] ${Styles.btnLocation}`}>
         <LanguageBtn onClick={langBtnClickHandler}/>
         <MenuBtn/>
