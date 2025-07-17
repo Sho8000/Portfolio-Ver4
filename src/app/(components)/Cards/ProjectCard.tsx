@@ -27,6 +27,8 @@ export default function ProjectCard({textLeft, bgColor,project,container,btnText
           alt="Phone Image"
           width={120}
           height={240}
+          priority
+          loading="eager"
         />
       </div>
 
@@ -48,6 +50,8 @@ export default function ProjectCard({textLeft, bgColor,project,container,btnText
           alt="projectImage"
           width={400}
           height={400}
+          priority
+          loading="eager"
         />
         <Image
           className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -55,6 +59,8 @@ export default function ProjectCard({textLeft, bgColor,project,container,btnText
           alt="projectImage"
           width={400}
           height={400}
+          priority
+          loading="eager"
         />
         <div className="invisible">
           <Image
