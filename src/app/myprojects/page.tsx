@@ -2,10 +2,13 @@
 import { useLangStore } from "@/store/useLangStore";
 import ProjectCard from "../(components)/Cards/ProjectCard";
 import { useEffect, useState } from "react";
+import { useDetailContext } from "../(context)/DetailPageContext";
+import Detail from "../(components)/Detail/Detail";
 
 export default function MyProject() {
   const {data} = useLangStore();
   const [filter, setFilter] = useState("all projects")
+  const {isDetailOpen} = useDetailContext();
   const projects = data.myProject
 
   useEffect(()=>{
@@ -62,6 +65,9 @@ export default function MyProject() {
             </>
           }
         </div>
+        {isDetailOpen && 
+          <Detail/>
+        }
       </section>
     </>
   );

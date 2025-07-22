@@ -3,6 +3,7 @@ import Styles from "./Cards.module.css"
 import Image from "next/image";
 import NormalBtn from "../Btn/NormalBtn";
 import { usePathname } from "next/navigation";
+import { useDetailContext } from "@/app/(context)/DetailPageContext";
 
 interface ProjectCardProps {
   textLeft: boolean;
@@ -11,15 +12,19 @@ interface ProjectCardProps {
   roleTitle:string;
   container?:"none";
   btnText?:string;
+  detail?:boolean;
 }
 
-export default function ProjectCard({textLeft, bgColor,project,roleTitle,container,btnText}:ProjectCardProps) {
+export default function ProjectCard({textLeft, bgColor,project,roleTitle,container,btnText,detail=false}:ProjectCardProps) {
   const pathName = usePathname  ();
+  const {changeDetailStatus} = useDetailContext()
 
   return (
     <div className={`group w-[90%] m-auto rounded-[40px] p-[2rem] items-center 
-    ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)}
-    ${container==="none"?("bg-transparent "):(`${bgColor} shadow-[-10px_10px_10px_rgba(0,0,0,0.25)] hover:bg-[#e5e5ff]`)}
+      ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)}
+      ${container==="none"?("bg-transparent "):(`${bgColor} shadow-[-10px_10px_10px_rgba(0,0,0,0.25)] hover:bg-[#e5e5ff]
+      ${(!container && !detail)?("cursor-pointer"):("")}`)
+    }
     transition-colors duration-300`}>
       {/* Image for phone */}
       <div className={`${Styles.phoneImg} ${pathName==="/myprojects"&&(Styles.orderProjectPhone2)}`}>
@@ -75,7 +80,7 @@ export default function ProjectCard({textLeft, bgColor,project,roleTitle,contain
 
       {/* btn */}
       {btnText && 
-        <div className={`[grid-area:btn] justify-self-center ${Styles.btnArea} ${pathName==="/myprojects"&&(Styles.orderProjectPhone4)}`}>
+        <div className={`[grid-area:btn] justify-self-center ${Styles.btnArea} ${pathName==="/myprojects"&&(Styles.orderProjectPhone4)}`} onClick={()=>{changeDetailStatus(true)}}>
           <NormalBtn text={btnText}/>
         </div>
       }

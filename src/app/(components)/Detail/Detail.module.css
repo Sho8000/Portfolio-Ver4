@@ -1,0 +1,22 @@
+@media only screen and (min-width:1441px){
+  .fontSize{
+    font-size: 64px;
+  }
+}
+
+@media only screen and (max-width:1440px){
+  .fontSize{
+    font-size: 52px;
+  }
+}
+
+@media only screen and (max-width:426px){
+  .fontSize{
+    font-size: 40px;
+  }
+}
+
+.isActive{
+  font-weight: 700;
+  text-decoration: underline;
+}

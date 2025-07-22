@@ -1,6 +1,7 @@
 import IAM from "./(components)/Home/IAmSection/IAmSection";
 import TitlePage from "./(components)/Home/TitleSection/TitlePage";
 import ProjectsSection from "./(components)/Home/Projects/ProjectsSection";
+import Detail from "./(components)/Detail/Detail";
 
 export default function Home() {
 

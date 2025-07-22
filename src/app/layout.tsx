@@ -5,6 +5,7 @@
   import Navbar from "./(components)/Navbar/Navbar";
   import Footer from "./(components)/Footer/Footer";
   import { Toaster } from "react-hot-toast";
+import { DetailContextProvider } from "./(context)/DetailPageContext";
 
   const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -44,10 +45,12 @@
           className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} ${sawarabiMincho.variable} antialiased`}
         >
           <MenuContextProvider>
-            <Navbar/>
-            <Toaster position="top-right" />
-            {children}
-            <Footer/>
+            <DetailContextProvider>
+              <Navbar/>
+              <Toaster position="top-right" />
+              {children}
+              <Footer/>
+            </DetailContextProvider>
           </MenuContextProvider>
         </body>
       </html>
