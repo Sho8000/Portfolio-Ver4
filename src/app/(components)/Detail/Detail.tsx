@@ -1,17 +1,17 @@
 "use client"
-import Link from "next/link";
+//import Link from "next/link";
 import MenuCloseBtn from "../Btn/CloseBtn";
-import Styles from "./Menu.module.css"
-import { usePathname } from "next/navigation";
-import { useMenuContext } from "@/app/(context)/MenuBtnContext";
+//import Styles from "./Menu.module.css"
+//import { usePathname } from "next/navigation";
+//import { useMenuContext } from "@/app/(context)/MenuBtnContext";
 import { useLangStore } from "@/store/useLangStore";
 import { useEffect, useRef } from "react";
 import { menuOpenAnimate } from "@/lib/menuAnimation";
 import ProjectCard from "../Cards/ProjectCard";
 
 export default function Detail() {
-  const pathName = usePathname();
-  const {changeMenuStatus} = useMenuContext();
+//  const pathName = usePathname();
+//  const {changeMenuStatus} = useMenuContext();
   const {data} = useLangStore();
 
   const panelRef = useRef<HTMLDivElement>(null);
