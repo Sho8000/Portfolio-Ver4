@@ -33,6 +33,7 @@ import MainImg from "@/../public/LandingpageImages/MainImg.jpg"
 //skills
 import ReactImg from "@/../public/About/Skills/React_Logo_90_90.png"
 import NextJSImg from "@/../public/About/Skills/NextJS_Logo_90_90.png"
+import JQueryImg from "@/../public/About/Skills/JQuery_Logo_90_90.png"
 import ReduxImg from "@/../public/About/Skills/Redux_Logo_90_90.png"
 import ZustandImg from "@/../public/About/Skills/Zustand_Logo_90_90.png"
 import TailwindImg from "@/../public/About/Skills/Tailwind_Logo_90_90.png"
@@ -94,12 +95,14 @@ export interface MainDBEntry {
       filterTitle:string;
       filterContents:string[];
     };
+    roleTitle:string;
     clientProjects:{
       projectTypeName:string;
       projects:{
         projectName:string;
         projectType: string;
-        technologies: string;
+        myRole:string;
+        technologies: string[];
         imagePC:StaticImageData,
         imagePCFull:StaticImageData,
         imagePCHover:StaticImageData,
@@ -112,7 +115,8 @@ export interface MainDBEntry {
       projects:{
         projectName:string;
         projectType: string;
-        technologies: string;
+        myRole:string;
+        technologies: string[];
         imagePC:StaticImageData,
         imagePCFull:StaticImageData,
         imagePCHover:StaticImageData,
@@ -182,6 +186,10 @@ export const MainDBEng:MainDBEntry[] = [
             {
               skillName:"Next.js",
               skillImage:NextJSImg,
+            },
+            {
+              skillName:"JQuery",
+              skillImage:JQueryImg,
             },
             {
               skillName:"Redux",
@@ -303,13 +311,15 @@ export const MainDBEng:MainDBEntry[] = [
         filterTitle:"Filter",
         filterContents:["all pojects","client projects", "personal projects"],
       },
+      roleTitle:"My Role",
       clientProjects:{
         projectTypeName:"Client Projects",
         projects:[
           {
             projectName:"VanCastro Driving School",
             projectType:"Booking management system",
-            technologies:"something,,,",
+            myRole:"Full-Stack Engineer",
+            technologies:["Next.js","Redux","Zustand","Tailwind CSS","Radix UI","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
             imagePC:VanCastroPC,
             imagePCFull:VanCastroPCFull,
             imagePCHover:VanCastroPCHover,
@@ -319,7 +329,8 @@ export const MainDBEng:MainDBEntry[] = [
           {
             projectName:"HUH",
             projectType:"Shopify",
-            technologies:"something,,,",
+            myRole:"Frontend Engineer",
+            technologies:["React.js","Redux","Tailwind CSS"],
             imagePC:HUHPC,
             imagePCFull:HUHPCFull,
             imagePCHover:HUHPCHover,
@@ -329,7 +340,8 @@ export const MainDBEng:MainDBEntry[] = [
           {
             projectName:"AKiF AiRWAY",
             projectType:"Business introduction",
-            technologies:"something,,,",
+            myRole:"Frontend Engineer",
+            technologies:["JQuery","GSAP","Netlify"],
             imagePC:AkifPC,
             imagePCFull:AkifPCFull,
             imagePCHover:AkifPCHover,
@@ -344,7 +356,8 @@ export const MainDBEng:MainDBEntry[] = [
           {
             projectName:"Create Next App",
             projectType:"Restaurant menu & Order",
-            technologies:"something,,,",
+            myRole:"Full-Stack Engineer",
+            technologies:["Next.js","Zustand","Tailwind CSS","Framer Motion","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
             imagePC:RestaurantPC,
             imagePCFull:RestaurantPCFull,
             imagePCHover:RestaurantPCHover,
@@ -354,7 +367,8 @@ export const MainDBEng:MainDBEntry[] = [
           {
             projectName:"Line Clone",
             projectType:"Products introduction",
-            technologies:"something,,,",
+            myRole:"Frontend Engineer",
+            technologies:["Next.js","Tailwind CSS","GSAP","Vercel"],
             imagePC:LINEPC,
             imagePCFull:LINEPCFull,
             imagePCHover:LINEPCHover,
@@ -443,6 +457,10 @@ export const MainDBJpn:MainDBEntry[] = [
             {
               skillName:"Next.js",
               skillImage:NextJSImg,
+            },
+            {
+              skillName:"JQuery",
+              skillImage:JQueryImg,
             },
             {
               skillName:"Redux",
@@ -564,13 +582,15 @@ export const MainDBJpn:MainDBEntry[] = [
         filterTitle:"フィルター",
         filterContents:["全ての案件","顧客案件", "個人プロジェクト"],
       },
+      roleTitle:"役割",
       clientProjects:{
         projectTypeName:"顧客案件",
         projects:[
           {
             projectName:"VanCastro Driving School",
             projectType:"予約管理システム",
-            technologies:"something,,,",
+            myRole:"フルスタック・エンジニア",
+            technologies:["Next.js","Redux","Zustand","Tailwind CSS","Radix UI","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
             imagePC:VanCastroPC,
             imagePCFull:VanCastroPCFull,
             imagePCHover:VanCastroPCHover,
@@ -580,7 +600,8 @@ export const MainDBJpn:MainDBEntry[] = [
           {
             projectName:"HUH",
             projectType:"ネットショップ",
-            technologies:"something,,,",
+            myRole:"フロントエンド・エンジニア",
+            technologies:["React.js","Redux","Tailwind CSS"],
             imagePC:HUHPC,
             imagePCFull:HUHPCFull,
             imagePCHover:HUHPCHover,
@@ -590,7 +611,8 @@ export const MainDBJpn:MainDBEntry[] = [
           {
             projectName:"AKiF AiRWAY",
             projectType:"ビジネス紹介",
-            technologies:"something,,,",
+            myRole:"フロントエンド・エンジニア",
+            technologies:["JQuery","GSAP","Netlify"],
             imagePC:AkifPC,
             imagePCFull:AkifPCFull,
             imagePCHover:AkifPCHover,
@@ -605,7 +627,8 @@ export const MainDBJpn:MainDBEntry[] = [
           {
             projectName:"Create Next App",
             projectType:"レストランメニュー＆注文",
-            technologies:"something,,,",
+            myRole:"フルスタック・エンジニア",
+            technologies:["Next.js","Zustand","Tailwind CSS","Framer Motion","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
             imagePC:RestaurantPC,
             imagePCFull:RestaurantPCFull,
             imagePCHover:RestaurantPCHover,
@@ -615,7 +638,9 @@ export const MainDBJpn:MainDBEntry[] = [
           {
             projectName:"Lineサイトコピー",
             projectType:"製品紹介",
-            technologies:"something,,,",
+
+            myRole:"フロントエンド・エンジニア",
+            technologies:["Next.js","Tailwind CSS","GSAP","Vercel"],
             imagePC:LINEPC,
             imagePCFull:LINEPCFull,
             imagePCHover:LINEPCHover,

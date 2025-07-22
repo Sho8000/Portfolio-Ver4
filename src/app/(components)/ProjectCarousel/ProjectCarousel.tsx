@@ -10,11 +10,12 @@ import { animateCardIn, animateCardOut } from "@/lib/slideCards";
 interface ProjectsProps {
   cardBG:"bg-[#f2f2ff]"|"bg-[#fdfdfd]"; 
   projectInfo:MainDBEntry["myProject"]["clientProjects"]["projects"]|MainDBEntry["myProject"]["personalProjects"]["projects"];
+  roleTitle:string;
   textLeft:boolean;
   container?:"none";
 }
 
-export default function ProjectCarousel({cardBG,projectInfo,textLeft,container}:ProjectsProps) {
+export default function ProjectCarousel({cardBG,projectInfo,roleTitle,textLeft,container}:ProjectsProps) {
 	const [currentPage,setCurrentPage] = useState<number>(1);
   const directionRef = useRef<"left" | "right">("right");
   
@@ -62,7 +63,7 @@ export default function ProjectCarousel({cardBG,projectInfo,textLeft,container}:
   return (
     <div className={`relative w-[90%] m-auto`}>
       <div ref={cardRef}>
-        <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]} container={container}/>
+        <ProjectCard textLeft={textLeft} bgColor={cardBG} project={projectInfo[currentPage-1]} roleTitle={roleTitle} container={container}/>
       </div>
       <div className={`w-[90%] flex justify-between m-auto items-center ${Styles.arrowContainer}`}>
         <div onClick={handlePrevious} className={`${Styles.arrowPositionLeft}`}>

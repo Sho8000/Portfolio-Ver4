@@ -38,11 +38,11 @@ export default function MyProject() {
               {projects.clientProjects.projects.map((item,index)=>{
                 if(index%2===0){
                   return <div key={`client_${index}`} className="border-t-2 border-gray-300">
-                      <ProjectCard textLeft={true} project={item} container="none" btnText={projects.buttonText}/>
+                      <ProjectCard textLeft={true} project={item} roleTitle={projects.roleTitle} container="none" btnText={projects.buttonText}/>
                     </div>
                 }
                 return <div key={`client_${index}`} className="border-t-2 border-gray-300">
-                  <ProjectCard textLeft={false} project={item} container="none" btnText={projects.buttonText}/>
+                  <ProjectCard textLeft={false} project={item} roleTitle={projects.roleTitle} container="none" btnText={projects.buttonText}/>
                 </div>
               })}
             </>
@@ -52,11 +52,11 @@ export default function MyProject() {
             {projects.personalProjects.projects.map((item,index)=>{
               if(index%2===1){
                 return <div key={`personal_${index}`} className="border-t-2 border-gray-300">
-                    <ProjectCard textLeft={true} project={item} container="none" btnText={projects.buttonText}/>
+                    <ProjectCard textLeft={true} project={item} roleTitle={projects.roleTitle} container="none" btnText={projects.buttonText}/>
                   </div>
               }
               return <div key={`personal_${index}`} className="border-t-2 border-gray-300">
-                  <ProjectCard textLeft={false} project={item} container="none" btnText={projects.buttonText}/>
+                  <ProjectCard textLeft={false} project={item} roleTitle={projects.roleTitle} container="none" btnText={projects.buttonText}/>
                 </div>
               })}
             </>

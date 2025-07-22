@@ -8,11 +8,12 @@ interface ProjectCardProps {
   textLeft: boolean;
   bgColor?:"bg-[#f2f2ff]"|"bg-[#fdfdfd]";
   project:MainDBEntry["myProject"]["clientProjects"]["projects"][number]|MainDBEntry["myProject"]["personalProjects"]["projects"][number];
+  roleTitle:string;
   container?:"none";
   btnText?:string;
 }
 
-export default function ProjectCard({textLeft, bgColor,project,container,btnText}:ProjectCardProps) {
+export default function ProjectCard({textLeft, bgColor,project,roleTitle,container,btnText}:ProjectCardProps) {
   const pathName = usePathname  ();
 
   return (
@@ -38,8 +39,8 @@ export default function ProjectCard({textLeft, bgColor,project,container,btnText
         <p className={`${Styles.subTitle}`}>{project.projectType}</p>
       </div>
       <div className={`flex flex-col justify-center ${pathName==="/myprojects"&&(Styles.orderProjectPhone3)}`}>
-        <h2 className={`${Styles.projectName} font-bold`}>Technologies</h2>
-        <p className={`${Styles.subTitle}`}>{project.technologies}</p>
+        <h2 className={`${Styles.projectName} font-bold`}>{roleTitle}</h2>
+        <p className={`${Styles.subTitle}`}>{project.myRole}</p>
       </div>
       
       {/* Images for PC layout */}
