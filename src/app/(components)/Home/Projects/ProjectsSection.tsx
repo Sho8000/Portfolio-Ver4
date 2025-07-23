@@ -21,7 +21,7 @@ export default function ProjectsSection({type, bgColor,textLeft,container}:Proje
     <section className={`w-[100%] h-auto ${pageBG} py-[2rem]`}>
       <h1 className={`${Styles.projectTitle} text-center py-[2rem]`}>{projectInfo.projectTypeName}</h1>
 
-      <ProjectCarousel cardBG={CardBG} projectInfo={projectInfo.projects} roleTitle={data.myProject.roleTitle} textLeft={textLeft} container={container}/>
+      <ProjectCarousel cardBG={CardBG} projectInfo={projectInfo.projects} contentTitles={data.myProject.contentTitles} textLeft={textLeft} container={container}/>
     </section>
   );
 }

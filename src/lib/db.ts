@@ -95,7 +95,7 @@ export interface MainDBEntry {
       filterTitle:string;
       filterContents:string[];
     };
-    roleTitle:string;
+    contentTitles:string[];
     clientProjects:{
       projectTypeName:string;
       projects:{
@@ -311,7 +311,7 @@ export const MainDBEng:MainDBEntry[] = [
         filterTitle:"Filter",
         filterContents:["all pojects","client projects", "personal projects"],
       },
-      roleTitle:"My Role",
+      contentTitles:["My Role","Teck-Stack"],
       clientProjects:{
         projectTypeName:"Client Projects",
         projects:[
@@ -582,7 +582,7 @@ export const MainDBJpn:MainDBEntry[] = [
         filterTitle:"フィルター",
         filterContents:["全ての案件","顧客案件", "個人プロジェクト"],
       },
-      roleTitle:"役割",
+      contentTitles:["役割","テクノロジー"],
       clientProjects:{
         projectTypeName:"顧客案件",
         projects:[
