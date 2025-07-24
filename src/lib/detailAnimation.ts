@@ -9,11 +9,11 @@ export function detailOpenAnimate(
     tl.fromTo(
       detail,
       {
-        y: "-100%",
+        yPercent: -100,
         opacity: 0,
       },
       {
-        y: "0%",
+        yPercent: -50,
         opacity: 1,
         duration: 0.6,
         ease: "power3.out",

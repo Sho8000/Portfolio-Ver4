@@ -18,7 +18,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({textLeft, bgColor,project,contentTitles,container,btnText,detail=false}:ProjectCardProps) {
   const pathName = usePathname  ();
-  const {changeDetailStatus,updateDetailInfo} = useDetailContext()
+  const {detailInfo,changeDetailStatus,updateDetailInfo} = useDetailContext()
 
   const detailBtnHandler = (project:ProjectCardProps["project"],contentTitles:ProjectCardProps["contentTitles"]) => {
     changeDetailStatus(true);
@@ -63,10 +63,10 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
 
       {detail && 
         <>
-          <div className={`m-auto text-center [grid-area:teckStack] ${Styles.forPC}`}>
-            <h2 className={`${Styles.projectName} font-bold`}>{contentTitles[1]}
+          <div className={`w-full m-auto text-center [grid-area:teckStack] ${Styles.forPC} border-t-1 border-gray-500`}>
+            <h2 className={`${Styles.projectName} font-bold mt-[1rem]`}>{contentTitles[1]}
             </h2>
-            <SkillLists/>
+            <SkillLists detailSkills={detailInfo?.project.technologies}/>
           </div>
 
           <div className={`${Styles.orderProjectPhone3} ${Styles.forPhone}`}>
