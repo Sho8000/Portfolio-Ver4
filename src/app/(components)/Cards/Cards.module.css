@@ -34,24 +34,28 @@
     grid-template-areas: 
     "textTitle pic"
     "textDetail pic"
+    "teckStack teckStack"
     "btn btn"
     ;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr auto;
     column-gap: 1rem;
+    row-gap: 1rem;
   }
   .containerRightText{
     display: grid;
     grid-template-areas: 
     "pic textTitle"
     "pic textDetail"
+    "teckStack teckStack"
     "btn btn"
     ;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr auto auto;
     column-gap: 1rem;
+    row-gap: 1rem;
   }
-  .phoneImg{
+  .forPhone{
     display: none;
   }
   .textLayout{
@@ -81,7 +85,7 @@
   .phoneImg{
     margin: auto;
   }
-  .ImageForPC{
+  .forPC{
     display: none;
   }
   .subTitle{

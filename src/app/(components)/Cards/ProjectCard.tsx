@@ -4,6 +4,7 @@ import Image from "next/image";
 import NormalBtn from "../Btn/NormalBtn";
 import { usePathname } from "next/navigation";
 import { useDetailContext } from "@/app/(context)/DetailPageContext";
+import SkillLists from "../Aboutme/SkillListContents";
 
 interface ProjectCardProps {
   textLeft: boolean;
@@ -21,13 +22,13 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
 
   const detailBtnHandler = (project:ProjectCardProps["project"],contentTitles:ProjectCardProps["contentTitles"]) => {
     changeDetailStatus(true);
-    updateDetailInfo({project,contentTitles})    
+    updateDetailInfo({project,contentTitles,textLeft})    
   }
 
   const cardClickHandler = (project:ProjectCardProps["project"],contentTitles:ProjectCardProps["contentTitles"]) => {
     if(!container && !detail){
       changeDetailStatus(true);
-      updateDetailInfo({project,contentTitles})
+      updateDetailInfo({project,contentTitles,textLeft})
     }
   }
 
@@ -39,7 +40,7 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
       ${(!container && !detail)?("cursor-pointer"):("")}
     `} onClick={()=>{cardClickHandler(project,contentTitles)}}>
       {/* Image for phone */}
-      <div className={`${Styles.phoneImg} ${pathName==="/myprojects"&&(Styles.orderProjectPhone2)}`}>
+      <div className={`${Styles.forPhone} ${pathName==="/myprojects"&&(Styles.orderProjectPhone2)}`}>
         <Image
           src={project.imagePhone}
           alt="Phone Image"
@@ -59,14 +60,23 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
         <h2 className={`${Styles.projectName} font-bold`}>{contentTitles[0]}</h2>
         <p className={`${Styles.subTitle}`}>{project.myRole}</p>
       </div>
+
       {detail && 
-        <div className={`${Styles.orderProjectPhone4}`}>
-          <h2></h2>
-        </div>
-      }
+        <>
+          <div className={`m-auto text-center [grid-area:teckStack] ${Styles.forPC}`}>
+            <h2 className={`${Styles.projectName} font-bold`}>{contentTitles[1]}
+            </h2>
+            <SkillLists/>
+          </div>
+
+          <div className={`${Styles.orderProjectPhone3} ${Styles.forPhone}`}>
+            <h2 className={`${Styles.projectName} font-bold mt-[1rem]`}>{contentTitles[1]}</h2>
+          </div>
+        </>
+    }
       
       {/* Images for PC layout */}
-      <div className={`relative [grid-area:pic]  ${textLeft?("order-3"):("order-1")} ${Styles.ImageForPC}`}>
+      <div className={`relative [grid-area:pic]  ${textLeft?("order-3"):("order-1")} ${Styles.forPC}`}>
         <Image
           className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
           src={pathName==="/myprojects"? project.imagePCFull : project.imagePC}

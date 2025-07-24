@@ -102,7 +102,10 @@ export interface MainDBEntry {
         projectName:string;
         projectType: string;
         myRole:string;
-        technologies: string[];
+        technologies: {
+          skillName:string,
+          skillImage:StaticImageData,
+        }[];
         imagePC:StaticImageData,
         imagePCFull:StaticImageData,
         imagePCHover:StaticImageData,
@@ -116,7 +119,10 @@ export interface MainDBEntry {
         projectName:string;
         projectType: string;
         myRole:string;
-        technologies: string[];
+        technologies: {
+          skillName:string,
+          skillImage:StaticImageData,
+        }[];
         imagePC:StaticImageData,
         imagePCFull:StaticImageData,
         imagePCHover:StaticImageData,
@@ -319,7 +325,48 @@ export const MainDBEng:MainDBEntry[] = [
             projectName:"VanCastro Driving School",
             projectType:"Booking management system",
             myRole:"Full-Stack Engineer",
-            technologies:["Next.js","Redux","Zustand","Tailwind CSS","Radix UI","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
+            technologies:[
+              {
+                skillName:"Next.js",
+                skillImage:NextJSImg,
+              },
+              {
+                skillName:"Redux",
+                skillImage:ReduxImg,
+              },
+              {
+                skillName:"Zustand",
+                skillImage:ZustandImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+              {
+                skillName:"Radix UI",
+                skillImage:RadixImg,
+              },
+              {
+                skillName:"NextAuth",
+                skillImage:NextAuthImg,
+              },
+              {
+                skillName:"Prisma",
+                skillImage:PrismaImg,
+              },
+              {
+                skillName:"MongoDB",
+                skillImage:MongoDBImg,
+              },
+              {
+                skillName:"Contentful CMS",
+                skillImage:ContentfulCMSImg,
+              },
+              {
+                skillName:"Vercel",
+                skillImage:VercelImg,
+              },
+            ],
             imagePC:VanCastroPC,
             imagePCFull:VanCastroPCFull,
             imagePCHover:VanCastroPCHover,
@@ -330,7 +377,20 @@ export const MainDBEng:MainDBEntry[] = [
             projectName:"HUH",
             projectType:"Shopify",
             myRole:"Frontend Engineer",
-            technologies:["React.js","Redux","Tailwind CSS"],
+            technologies:[
+              {
+                skillName:"React.js",
+                skillImage:ReactImg,
+              },
+              {
+                skillName:"Redux",
+                skillImage:ReduxImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+            ],
             imagePC:HUHPC,
             imagePCFull:HUHPCFull,
             imagePCHover:HUHPCHover,
@@ -341,7 +401,20 @@ export const MainDBEng:MainDBEntry[] = [
             projectName:"AKiF AiRWAY",
             projectType:"Business introduction",
             myRole:"Frontend Engineer",
-            technologies:["JQuery","GSAP","Netlify"],
+            technologies:[
+              {
+                skillName:"JQuery",
+                skillImage:JQueryImg,
+              },
+              {
+                skillName:"GSAP",
+                skillImage:GSAPImg,
+              },  
+              {
+                skillName:"Netlify",
+                skillImage:NetlifyImg,
+              },
+            ],
             imagePC:AkifPC,
             imagePCFull:AkifPCFull,
             imagePCHover:AkifPCHover,
@@ -357,7 +430,44 @@ export const MainDBEng:MainDBEntry[] = [
             projectName:"Create Next App",
             projectType:"Restaurant menu & Order",
             myRole:"Full-Stack Engineer",
-            technologies:["Next.js","Zustand","Tailwind CSS","Framer Motion","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
+            technologies:[
+              {
+                skillName:"Next.js",
+                skillImage:NextJSImg,
+              },
+              {
+                skillName:"Zustand",
+                skillImage:ZustandImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+              {
+                skillName:"Framer Motion",
+                skillImage:FramerMotionImg,
+              },
+              {
+                skillName:"NextAuth",
+                skillImage:NextAuthImg,
+              },
+              {
+                skillName:"Prisma",
+                skillImage:PrismaImg,
+              },
+              {
+                skillName:"MongoDB",
+                skillImage:MongoDBImg,
+              },
+              {
+                skillName:"Contentful CMS",
+                skillImage:ContentfulCMSImg,
+              },
+              {
+                skillName:"Vercel",
+                skillImage:VercelImg,
+              },
+            ],
             imagePC:RestaurantPC,
             imagePCFull:RestaurantPCFull,
             imagePCHover:RestaurantPCHover,
@@ -368,7 +478,24 @@ export const MainDBEng:MainDBEntry[] = [
             projectName:"Line Clone",
             projectType:"Products introduction",
             myRole:"Frontend Engineer",
-            technologies:["Next.js","Tailwind CSS","GSAP","Vercel"],
+            technologies:[
+              {
+                skillName:"Next.js",
+                skillImage:NextJSImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+              {
+                skillName:"GSAP",
+                skillImage:GSAPImg,
+              },
+              {
+                skillName:"Vercel",
+                skillImage:VercelImg,
+              },
+            ],
             imagePC:LINEPC,
             imagePCFull:LINEPCFull,
             imagePCHover:LINEPCHover,
@@ -590,7 +717,48 @@ export const MainDBJpn:MainDBEntry[] = [
             projectName:"VanCastro Driving School",
             projectType:"予約管理システム",
             myRole:"フルスタック・エンジニア",
-            technologies:["Next.js","Redux","Zustand","Tailwind CSS","Radix UI","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
+            technologies:[
+              {
+                skillName:"Next.js",
+                skillImage:NextJSImg,
+              },
+              {
+                skillName:"Redux",
+                skillImage:ReduxImg,
+              },
+              {
+                skillName:"Zustand",
+                skillImage:ZustandImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+              {
+                skillName:"Radix UI",
+                skillImage:RadixImg,
+              },
+              {
+                skillName:"NextAuth",
+                skillImage:NextAuthImg,
+              },
+              {
+                skillName:"Prisma",
+                skillImage:PrismaImg,
+              },
+              {
+                skillName:"MongoDB",
+                skillImage:MongoDBImg,
+              },
+              {
+                skillName:"Contentful CMS",
+                skillImage:ContentfulCMSImg,
+              },
+              {
+                skillName:"Vercel",
+                skillImage:VercelImg,
+              },
+            ],
             imagePC:VanCastroPC,
             imagePCFull:VanCastroPCFull,
             imagePCHover:VanCastroPCHover,
@@ -601,7 +769,20 @@ export const MainDBJpn:MainDBEntry[] = [
             projectName:"HUH",
             projectType:"ネットショップ",
             myRole:"フロントエンド・エンジニア",
-            technologies:["React.js","Redux","Tailwind CSS"],
+            technologies:[
+              {
+                skillName:"React.js",
+                skillImage:ReactImg,
+              },
+              {
+                skillName:"Redux",
+                skillImage:ReduxImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+            ],
             imagePC:HUHPC,
             imagePCFull:HUHPCFull,
             imagePCHover:HUHPCHover,
@@ -612,7 +793,20 @@ export const MainDBJpn:MainDBEntry[] = [
             projectName:"AKiF AiRWAY",
             projectType:"ビジネス紹介",
             myRole:"フロントエンド・エンジニア",
-            technologies:["JQuery","GSAP","Netlify"],
+            technologies:[
+              {
+                skillName:"JQuery",
+                skillImage:JQueryImg,
+              },
+              {
+                skillName:"GSAP",
+                skillImage:GSAPImg,
+              },  
+              {
+                skillName:"Netlify",
+                skillImage:NetlifyImg,
+              },
+            ],
             imagePC:AkifPC,
             imagePCFull:AkifPCFull,
             imagePCHover:AkifPCHover,
@@ -628,7 +822,44 @@ export const MainDBJpn:MainDBEntry[] = [
             projectName:"Create Next App",
             projectType:"レストランメニュー＆注文",
             myRole:"フルスタック・エンジニア",
-            technologies:["Next.js","Zustand","Tailwind CSS","Framer Motion","NextAuth","Prisma","MongoDB","Contentful CMS","Vercel"],
+            technologies:[
+              {
+                skillName:"Next.js",
+                skillImage:NextJSImg,
+              },
+              {
+                skillName:"Zustand",
+                skillImage:ZustandImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+              {
+                skillName:"Framer Motion",
+                skillImage:FramerMotionImg,
+              },
+              {
+                skillName:"NextAuth",
+                skillImage:NextAuthImg,
+              },
+              {
+                skillName:"Prisma",
+                skillImage:PrismaImg,
+              },
+              {
+                skillName:"MongoDB",
+                skillImage:MongoDBImg,
+              },
+              {
+                skillName:"Contentful CMS",
+                skillImage:ContentfulCMSImg,
+              },
+              {
+                skillName:"Vercel",
+                skillImage:VercelImg,
+              },
+            ],
             imagePC:RestaurantPC,
             imagePCFull:RestaurantPCFull,
             imagePCHover:RestaurantPCHover,
@@ -640,7 +871,24 @@ export const MainDBJpn:MainDBEntry[] = [
             projectType:"製品紹介",
 
             myRole:"フロントエンド・エンジニア",
-            technologies:["Next.js","Tailwind CSS","GSAP","Vercel"],
+            technologies:[
+              {
+                skillName:"Next.js",
+                skillImage:NextJSImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+              {
+                skillName:"GSAP",
+                skillImage:GSAPImg,
+              },
+              {
+                skillName:"Vercel",
+                skillImage:VercelImg,
+              },
+            ],
             imagePC:LINEPC,
             imagePCFull:LINEPCFull,
             imagePCHover:LINEPCHover,

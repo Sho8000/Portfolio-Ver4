@@ -6,6 +6,7 @@ import { createContext, useContext, useState } from "react";
 type DetailInfo = {
   contentTitles:string[];
   project:MainDBEntry["myProject"]["clientProjects"]["projects"][number]|MainDBEntry["myProject"]["personalProjects"]["projects"][number];
+  textLeft:boolean;
 }
 
 type DetailState = {
@@ -28,6 +29,7 @@ const DetailContextProvider: React.FC<{children: React.ReactNode}> = ({children}
   const updateDetailInfo = (info:DetailState["detailInfo"]) => {
     setDetailInfo(info);
   }
+
 
   const value = {isDetailOpen,detailInfo,changeDetailStatus,updateDetailInfo}
 
