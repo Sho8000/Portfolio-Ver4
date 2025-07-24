@@ -3,31 +3,37 @@ import githubImg from "@/../public/FooterImages/github.png"
 import emailImg from "@/../public/FooterImages/Email.png"
 import linkedInImg from "@/../public/FooterImages/LinkedIn.png"
 import instagramImg from "@/../public/FooterImages/instagramLogo.png"
+/* Project Images */
 import AkifPC from "@/../public/ProjectImages/AkifPC.png"
 import AkifPCHover from "@/../public/ProjectImages/AkifPCHover.png"
 import AkifPCFull from "@/../public/ProjectImages/AkifPCFull.png"
 import AkifPCFullHover from "@/../public/ProjectImages/AkifPCFullHover.png"
 import AkifPhone from "@/../public/ProjectImages/AkifPhone.png"
+import AkifPhoneHover from "@/../public/ProjectImages/AkifPhoneHover.png"
 import HUHPC from "@/../public/ProjectImages/HUHPC.png"
 import HUHPCHover from "@/../public/ProjectImages/HUHPCHover.png"
 import HUHPCFull from "@/../public/ProjectImages/HUHPCFull.png"
 import HUHPCFullHover from "@/../public/ProjectImages/HUHPCFullHover.png"
 import HUHPhone from "@/../public/ProjectImages/HUHPhone.png"
+import HUHPhoneHover from "@/../public/ProjectImages/HUHPhoneHover.png"
 import VanCastroPC from "@/../public/ProjectImages/VanCastroPC.png"
 import VanCastroPCHover from "@/../public/ProjectImages/VanCastroPCHover.png"
 import VanCastroPCFull from "@/../public/ProjectImages/VanCastroPCFull.png"
 import VanCastroPCFullHover from "@/../public/ProjectImages/VanCastroPCFullHover.png"
 import VanCastroPhone from "@/../public/ProjectImages/VanCastroPhone.png"
+import VanCastroPhoneHover from "@/../public/ProjectImages/VanCastroPhoneHover.png"
 import RestaurantPC from "@/../public/ProjectImages/RestaurantPC.png"
 import RestaurantPCHover from "@/../public/ProjectImages/RestaurantPCHover.png"
 import RestaurantPCFull from "@/../public/ProjectImages/RestaurantPCFull.png"
 import RestaurantPCFullHover from "@/../public/ProjectImages/RestaurantPCFullHover.png"
 import RestaurantPhone from "@/../public/ProjectImages/RestaurantPhone.png"
+import RestaurantPhoneHover from "@/../public/ProjectImages/RestaurantPhoneHover.png"
 import LINEPC from "@/../public/ProjectImages/LINEPC.png"
 import LINEPCHover from "@/../public/ProjectImages/LINEPCHover.png"
 import LINEPCFull from "@/../public/ProjectImages/LINEPCFull.png"
 import LINEPCFullHover from "@/../public/ProjectImages/LINEPCFullHover.png"
 import LINEPhone from "@/../public/ProjectImages/LINEPhone.png"
+import LINEPhoneHover from "@/../public/ProjectImages/LINEPhoneHover.png"
 import MyPicture from "@/../public/LandingpageImages/MyPicture.png"
 import MainImg from "@/../public/LandingpageImages/MainImg.jpg"
 //skills
@@ -112,6 +118,7 @@ export interface MainDBEntry {
         imagePCHover:StaticImageData,
         imagePCFullHover:StaticImageData,
         imagePhone:StaticImageData,
+        imagePhoneHover:StaticImageData,
         url:string,
       }[];
     };
@@ -131,6 +138,7 @@ export interface MainDBEntry {
         imagePCHover:StaticImageData,
         imagePCFullHover:StaticImageData,
         imagePhone:StaticImageData,
+        imagePhoneHover:StaticImageData,
         url:string,
       }[];
     };
@@ -377,6 +385,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCHover:VanCastroPCHover,
             imagePCFullHover:VanCastroPCFullHover,
             imagePhone:VanCastroPhone,
+            imagePhoneHover:VanCastroPhoneHover,
             url:"https://final-project-van-castro.vercel.app/",
           },
           {
@@ -403,6 +412,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCHover:HUHPCHover,
             imagePCFullHover:HUHPCFullHover,
             imagePhone:HUHPhone,
+            imagePhoneHover:HUHPhoneHover,
             url:"https://pern-alpha.vercel.app/",
           },
           {
@@ -429,6 +439,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCHover:AkifPCHover,
             imagePCFullHover:AkifPCFullHover,
             imagePhone:AkifPhone,
+            imagePhoneHover:AkifPhoneHover,
             url:"https://akifairway-englishsite.netlify.app/",
           },
         ],  
@@ -484,6 +495,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCHover:RestaurantPCHover,
             imagePCFullHover:RestaurantPCFullHover,
             imagePhone:RestaurantPhone,
+            imagePhoneHover:RestaurantPhoneHover,
             url:"https://sample-restaurant-tau.vercel.app/",
           },
           {
@@ -514,6 +526,7 @@ export const MainDBEng:MainDBEntry[] = [
             imagePCHover:LINEPCHover,
             imagePCFullHover:LINEPCFullHover,
             imagePhone:LINEPhone,
+            imagePhoneHover:LINEPhoneHover,
             url:"https://line-clone.vercel.app/",
           },  
         ]
@@ -779,6 +792,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCHover:VanCastroPCHover,
             imagePCFullHover:VanCastroPCFullHover,
             imagePhone:VanCastroPhone,
+            imagePhoneHover:VanCastroPhoneHover,
             url:"https://final-project-van-castro.vercel.app/",
           },
           {
@@ -805,6 +819,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCHover:HUHPCHover,
             imagePCFullHover:HUHPCFullHover,
             imagePhone:HUHPhone,
+            imagePhoneHover:HUHPhoneHover,
             url:"https://pern-alpha.vercel.app/",
           },
           {
@@ -831,6 +846,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCHover:AkifPCHover,
             imagePCFullHover:AkifPCFullHover,
             imagePhone:AkifPhone,
+            imagePhoneHover:AkifPhoneHover,
             url:"https://akifairway-englishsite.netlify.app/",
           },
         ],  
@@ -886,6 +902,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCHover:RestaurantPCHover,
             imagePCFullHover:RestaurantPCFullHover,
             imagePhone:RestaurantPhone,
+            imagePhoneHover:RestaurantPhoneHover,
             url:"https://sample-restaurant-tau.vercel.app/",
           },
           {
@@ -917,6 +934,7 @@ export const MainDBJpn:MainDBEntry[] = [
             imagePCHover:LINEPCHover,
             imagePCFullHover:LINEPCFullHover,
             imagePhone:LINEPhone,
+            imagePhoneHover:LINEPhoneHover,
             url:"https://line-clone.vercel.app/",
           },  
         ]

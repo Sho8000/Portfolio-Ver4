@@ -1,3 +1,5 @@
+"use client"
+
 import { MainDBEntry } from "@/lib/db";
 import Styles from "./Cards.module.css"
 import Image from "next/image";
@@ -5,6 +7,7 @@ import NormalBtn from "../Btn/NormalBtn";
 import { usePathname, useRouter } from "next/navigation";
 import { useDetailContext } from "@/app/(context)/DetailPageContext";
 import SkillLists from "../Aboutme/SkillListContents";
+import { useEffect, useState } from "react";
 
 interface ProjectCardProps {
   textLeft: boolean;
@@ -20,6 +23,17 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
   const router = useRouter(); 
   const pathName = usePathname  ();
   const {detailInfo,changeDetailStatus,updateDetailInfo} = useDetailContext()
+
+  const [isAltImage, setIsAltImage] = useState(false);
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setIsAltImage(prev => !prev);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
 
   const detailBtnHandler = (project:ProjectCardProps["project"],contentTitles:ProjectCardProps["contentTitles"]) => {
     changeDetailStatus(true);
@@ -51,14 +65,25 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
     `} onClick={()=>{cardClickHandler(project,contentTitles)}}>
       {/* Image for phone */}
       <div className={`${Styles.forPhone} ${pathName==="/myprojects"&&(Styles.orderProjectPhone2)}`}>
-        <Image
-          src={project.imagePhone}
-          alt="Phone Image"
-          width={120}
-          height={240}
-          priority
-          loading="eager"
-        />
+
+      {project.imagePhone && project.imagePhoneHover && (
+        <div className="relative w-[120px] h-[240px]">
+          <Image
+            src={project.imagePhone}
+            alt="Phone Image"
+            fill
+            className={`absolute transition-opacity duration-700 ${isAltImage ? "opacity-0" : "opacity-100"}`}
+            style={{ objectFit: "contain" }}
+          />
+          <Image
+            src={project.imagePhoneHover}
+            alt="Phone Image Hover"
+            fill
+            className={`absolute transition-opacity duration-700 ${isAltImage ? "opacity-100" : "opacity-0"}`}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+      )}
       </div>
 
       {/* Text Area */}
