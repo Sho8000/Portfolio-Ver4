@@ -37,7 +37,7 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
       ${textLeft?(Styles.containerLeftText):(Styles.containerRightText)}
       ${container==="none"?("bg-transparent "):(`${bgColor} shadow-[-10px_10px_10px_rgba(0,0,0,0.25)] hover:bg-[#e5e5ff]`)}
       transition-colors duration-300
-      ${(!container && !detail)?("cursor-pointer"):("")}
+      ${(!container && !detail) && "cursor-pointer"}
     `} onClick={()=>{cardClickHandler(project,contentTitles)}}>
       {/* Image for phone */}
       <div className={`${Styles.forPhone} ${pathName==="/myprojects"&&(Styles.orderProjectPhone2)}`}>
@@ -71,6 +71,7 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
 
           <div className={`${Styles.orderProjectPhone3} ${Styles.forPhone}`}>
             <h2 className={`${Styles.projectName} font-bold mt-[1rem]`}>{contentTitles[1]}</h2>
+            <SkillLists detailSkills={detailInfo?.project.technologies}/>
           </div>
         </>
     }

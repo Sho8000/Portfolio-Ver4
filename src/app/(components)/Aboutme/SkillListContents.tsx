@@ -72,7 +72,7 @@ export default function SkillLists({aboutMe,detailSkills}:SkillListsProps) {
             })}
           </p>
     
-          <div className="flex justify-center w-[100%]">
+          <div className="flex justify-center w-[100%] flex-wrap">
             {detailSkills.map((image,imageIndex)=>{
               return <Image
               key={`img_${imageIndex}`}
