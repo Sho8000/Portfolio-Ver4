@@ -5,6 +5,7 @@ import NormalBtn from "../Btn/NormalBtn";
 import { usePathname } from "next/navigation";
 import { useDetailContext } from "@/app/(context)/DetailPageContext";
 import SkillLists from "../Aboutme/SkillListContents";
+//import Link from "next/link";
 
 interface ProjectCardProps {
   textLeft: boolean;
@@ -63,16 +64,31 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
 
       {detail && 
         <>
+          {/* Teck Stack for PC*/}
           <div className={`w-full m-auto text-center [grid-area:teckStack] ${Styles.forPC} border-t-1 border-gray-500`}>
             <h2 className={`${Styles.projectName} font-bold mt-[1rem]`}>{contentTitles[1]}
             </h2>
             <SkillLists detailSkills={detailInfo?.project.technologies}/>
           </div>
 
+          {/* Teck Stack for Phone*/}
           <div className={`${Styles.orderProjectPhone3} ${Styles.forPhone}`}>
             <h2 className={`${Styles.projectName} font-bold mt-[1rem]`}>{contentTitles[1]}</h2>
             <SkillLists detailSkills={detailInfo?.project.technologies}/>
           </div>
+
+          {/* Detail */}
+          <div className={`w-full m-auto text-center [grid-area:detail] ${Styles.orderProjectPhone4}`}>
+            <h2 className={`${Styles.projectName} font-bold mt-[1rem]`}>{contentTitles[2]}
+            </h2>
+            <p className={`${Styles.subTitle}`}>{detailInfo?.project.detail}</p>
+          </div>
+
+          {/* Links */}
+          <div>
+{/*             <Link></Link> */}
+          </div>
+
         </>
     }
       

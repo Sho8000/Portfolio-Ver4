@@ -35,10 +35,11 @@
     "textTitle pic"
     "textDetail pic"
     "teckStack teckStack"
+    "detail detail"
     "btn btn"
     ;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr auto auto auto;
     column-gap: 1rem;
     row-gap: 1rem;
   }
@@ -48,10 +49,11 @@
     "pic textTitle"
     "pic textDetail"
     "teckStack teckStack"
+    "detail detail"
     "btn btn"
     ;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr auto auto;
+    grid-template-rows: 1fr 1fr auto auto auto;
     column-gap: 1rem;
     row-gap: 1rem;
   }
