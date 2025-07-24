@@ -2,10 +2,9 @@ import { MainDBEntry } from "@/lib/db";
 import Styles from "./Cards.module.css"
 import Image from "next/image";
 import NormalBtn from "../Btn/NormalBtn";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useDetailContext } from "@/app/(context)/DetailPageContext";
 import SkillLists from "../Aboutme/SkillListContents";
-//import Link from "next/link";
 
 interface ProjectCardProps {
   textLeft: boolean;
@@ -18,6 +17,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({textLeft, bgColor,project,contentTitles,container,btnText,detail=false}:ProjectCardProps) {
+  const router = useRouter(); 
   const pathName = usePathname  ();
   const {detailInfo,changeDetailStatus,updateDetailInfo} = useDetailContext()
 
@@ -30,6 +30,15 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
     if(!container && !detail){
       changeDetailStatus(true);
       updateDetailInfo({project,contentTitles,textLeft})
+    }
+  }
+
+  const moveToLinkHandler = (link:string) => {
+    if(link==="/myprojects"){
+      changeDetailStatus(false);
+      router.push(link);
+    } else {
+      window.location.href = link;
     }
   }
 
@@ -85,10 +94,10 @@ export default function ProjectCard({textLeft, bgColor,project,contentTitles,con
           </div>
 
           {/* Links */}
-          <div>
-{/*             <Link></Link> */}
+          <div className={`w-full flex justify-between [grid-area:links] ${Styles.subTitle} ${Styles.orderProjectPhone5} text-blue-700 underline`}>
+            <p className={`cursor-pointer`} onClick={()=>moveToLinkHandler("/myprojects")}>All Projects</p>
+            <p className={`cursor-pointer`} onClick={()=>moveToLinkHandler(detailInfo!.project.url)}>Open</p>
           </div>
-
         </>
     }
       
