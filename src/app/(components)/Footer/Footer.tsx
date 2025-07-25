@@ -5,6 +5,7 @@ import Styles from "./Footer.module.css"
 import { usePathname } from "next/navigation";
 import { upDownAnimation } from "@/lib/upDownAnimation";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Footer() {
   const pathName = usePathname();
@@ -24,7 +25,9 @@ export default function Footer() {
       {pathName!=="/contactme" &&
         <footer className={`relative w-[100%] ${Styles.footerSize} overflow-hidden`}>
           <div className={`absolute z-10 w-[100%] ${Styles.titleFont} top-[50%] translate-y-[-50%]`}>
-            <h1 className={`text-white text-center mb-[1rem]`}>{footer.footerText}</h1>
+            <Link href={"/contactme"}>
+              <h1 className={`text-white text-center mb-[1rem]`}>{footer.footerText}</h1>
+            </Link>
             <div className="flex justify-center gap-[2rem]">
               { footer.footerInfo.map((item,index)=>{
                 return <Image
