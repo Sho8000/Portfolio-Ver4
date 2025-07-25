@@ -307,7 +307,7 @@ export const MainDBEng:MainDBEntry[] = [
         },
         {
           experiencesTitle:"Production/ Service Engineering",
-          contents:["I was working a production/service engineer for in total 13 years. I was usually improving factory process and changing systems, arrangement, and so on. For example, I have knowledge of", "stock management, quality control, automatize repeated works that using PC,,,", "so I can create systems deeper and tailored applications."],
+          contents:["I was working a production/service engineer in a semiconductor company for in total 13 years. I was usually improving factory process and changing systems, arrangement, and so on. For example, I have knowledge of", "stock management, quality control, automatize repeated works that using PC,,,", "so I can create systems deeper and tailored applications."],
           contentsStringType:["normal", "bold", "normal"],
         },
       ],
@@ -320,7 +320,7 @@ export const MainDBEng:MainDBEntry[] = [
         {
           provideTitle:["Application to", "save your time"],
           titleStringType:["normal", "red"],
-          contents:"aking advantage of  my experiences,I'll provide not only just website, but also applications that help your job. I'm always thinking about efficiency!!"
+          contents:"Taking advantage of my experiences,I'll provide not only just website, but also applications that help your job. If you are feeling troublesome, let's solve it together!"
         },
       ]
     },
@@ -599,10 +599,10 @@ export const MainDBJpn:MainDBEntry[] = [
       myName:"Sho Yoshimura",
       selfIntroduction:["高速でスケーラブルなWebアプリケーションの構築に注力する", "フルスタック開発者", "です。フロントエンドでは主に", "React、TypeScript、Next.js", "を使用し、バックエンドでは", "Node.js、Express、MongoDB、PostgreSQL", "を扱えます。アイデアをクリーンで機能的なコードへと変えることが好きで、常に優れたユーザー体験を目指しています。"],
       selfIntroductionStringType:["normal","red","normal","bold","normal","bold","normal"],
-      aboutTitles:["スキル","経験","What I provide,,,"],
+      aboutTitles:["スキル","経験","ご提案"],
       skills:[
         {
-          skillType:"Frontend Frameworks & UI Libraries",
+          skillType:"フロントエンドツール",
           skillList:[
             {
               skillName:"React.js",
@@ -647,7 +647,7 @@ export const MainDBJpn:MainDBEntry[] = [
           ]
         },
         {
-          skillType:"Backend & Server Technologies",
+          skillType:"バックエンド/サーバーツール",
           skillList:[
             {
               skillName:"Node.js",
@@ -672,7 +672,7 @@ export const MainDBJpn:MainDBEntry[] = [
           ]
         },
         {
-          skillType:"Databases & Data Storage",
+          skillType:"データベース",
           skillList:[
             {
               skillName:"MongoDB",
@@ -689,7 +689,7 @@ export const MainDBJpn:MainDBEntry[] = [
           ]
         },
         {
-          skillType:"Deployment, CMS & Services",
+          skillType:"公開/CMS・サービス",
           skillList:[
             {
               skillName:"Contentful CMS",
@@ -708,26 +708,26 @@ export const MainDBJpn:MainDBEntry[] = [
       ],
       experiences:[
         {
-          experiencesTitle:"Web Developer",
-          contents:["I built websites and web applications for my clients. You can see all of my big projects in", "My Projects", "page."],
+          experiencesTitle:"フルスタックエンジニア",
+          contents:["フルスタックエンジニアとして、顧客用のウェブサイトやアプリケーションを作成し続けています。私のプロジェクトは、", "プロジェクト", "にて詳細/閲覧可能です。"],
           contentsStringType:["normal", "link", "normal"],
         },
         {
-          experiencesTitle:"Production/ Service Engineering",
-          contents:["I was working a production/service engineer for in total 13 years. I was usually improving factory process and changing systems, arrangement, and so on. For example, I have knowledge of", "stock management, quality control, automatize repeated works that using PC,,,", "so I can create systems deeper and tailored applications."],
+          experiencesTitle:"生産/サービスエンジニア",
+          contents:["半導体企業の生産/サービスエンジニアとして13年働いていました。主に工程改善やシステム改善・調整などに携わっていたため、", "在庫管理、品質管理、単純業務の自動化(PC作業)", "などといった悩み事改善システム等もご提案できると考えています。"],
           contentsStringType:["normal", "bold", "normal"],
         },
       ],
       provide:[
         {
-          provideTitle:["Website to", "contribute your profit"],
+          provideTitle:["ウェブサイトで", "利益貢献"],
           titleStringType:["normal", "red"],
-          contents:"I provide the websites that simple, but easy to understand. I focus on ”What you are doing”. Let's talk a lot to create the best website together!!"
+          contents:"常に「ウェブサイトを持つ目的は何か」ということに注目し、シンプルで、且つ顧客にも分かりやすい、目的に沿ったウェブサイトを提供します。最高のウェブサイト作成するために、先ずは話し合いませんか？"
         },
         {
-          provideTitle:["Application to", "save your time"],
+          provideTitle:["ウェブアプリで", "時間節約"],
           titleStringType:["normal", "red"],
-          contents:"aking advantage of  my experiences,I'll provide not only just website, but also applications that help your job. I'm always thinking about efficiency!!"
+          contents:"私の経験を生かし、ウェブサイト作成だけでなく、業務効率を改善できるアプリケーション開発も承ります。あなたの「面倒くさい」を一緒に解消しませんか？"
         },
       ]
     },

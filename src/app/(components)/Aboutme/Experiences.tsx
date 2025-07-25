@@ -18,7 +18,7 @@ export default function Experiences() {
             return <li key={index} className={`${Styles.skillTypeFont} mb-[2rem]`}>{item.experiencesTitle}
               <p className={`font-medium ${Styles.commentSize}`}>
                 {item.contents.map((content,contentIndex)=>{
-                  if(content==="My Projects"){
+                  if(content==="My Projects" || content==="プロジェクト"){
                     return <Link 
                       key={`content_${contentIndex}`}
                       href={"/myprojects"}
