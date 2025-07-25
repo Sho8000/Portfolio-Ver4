@@ -9,7 +9,7 @@ export default function Experiences() {
   const aboutMe = data.aboutMe;
 
   return (
-    <section className="w-[100%]">
+    <section className="w-[100%] bg-[linear-gradient(to_bottom,_rgba(242,242,255,0)_0%,_#f2f2ff_10%,_#f2f2ff_90%,_rgba(242,242,255,0)_100%)] pt-[8vh] pb-[10vh] -mt-[8vh] -mb-[10vh]">
       <div className={`flex flex-col items-center text-center m-auto ${Styles.container}`}>
         <h2 className={`${Styles.titleFont}`}>{aboutMe.aboutTitles[1]}</h2>
 

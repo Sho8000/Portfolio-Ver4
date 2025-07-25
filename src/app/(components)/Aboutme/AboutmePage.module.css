@@ -77,6 +77,18 @@
 }
 
 /* Layout Responsive */
+.paperBG{
+  background-color: #fffefc;
+  border: 1px rgba(128, 128, 128, 0.345) solid;
+  background-image: url(../../../../public/LandingpageImages/bg-paperStyle.png);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 12px;
+  box-shadow:
+    0 2px 5px rgba(0,0,0,0.06),
+    inset 0 0 5px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+
 @media only screen and (min-width:1001px){
   .container{
     width: 90%;

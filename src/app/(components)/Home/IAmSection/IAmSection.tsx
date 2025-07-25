@@ -64,48 +64,50 @@ export default function IAM() {
         </div>
         <div className={`${Styles.textArea}`}>
           <h1 className={`${Styles.titleForPC} ${Styles.titleFont}`}>{data.landing.lading_titles[0]}</h1>
-          <h2 className={`${Styles.myName}`} style={{ fontFamily: aboutMeFont }}>{data.aboutMe.myName}</h2>
-          <h2 style={{ fontFamily: aboutMeFont }}>
-          {aboutMe.selfIntroduction.map((word,wordIndex)=>{
-              const wordType = aboutMe.selfIntroductionStringType[wordIndex]
+          <div className={`${Styles.paperBG}`}>
+            <h2 className={`mb-[1.5rem] ${Styles.myName}`} style={{ fontFamily: aboutMeFont }}>{data.aboutMe.myName}</h2>
+            <h2 style={{ fontFamily: aboutMeFont }}>
+            {aboutMe.selfIntroduction.map((word,wordIndex)=>{
+                const wordType = aboutMe.selfIntroductionStringType[wordIndex]
 
-              const baseClass = Styles.commentSize;
-              const boldClass = `font-bold ${Styles.commentSizeBold}`;
-              const redClass = `text-red-600 ${Styles.commentSizeBold}`;
+                const baseClass = Styles.commentSize;
+                const boldClass = `font-bold ${Styles.commentSizeBold}`;
+                const redClass = `text-red-600 ${Styles.commentSizeBold}`;
+              
+                const className = wordType === "red" 
+                  ? redClass
+                  : wordType === "bold"
+                  ? boldClass
+                  : baseClass;
             
-              const className = wordType === "red" 
-                ? redClass
-                : wordType === "bold"
-                ? boldClass
-                : baseClass;
-           
-              return <span key={wordIndex} className="mr-[0.3rem]">
-                {word.split("").map((letter, letterIdx) => {
-                  const refCallback = (el: HTMLSpanElement | null) => {
-                    if (el) lettersRef.current[letterIndex++] = el;
-                  };
-                  return (
-                    <span
-                      key={letterIdx}
-                      ref={refCallback}
-                      className={`${className}`}
-                    >
-                      {letter}
-                    </span>
-                  );
-                })}
-                <span
-                  ref={(el) => {
-                    if (el) lettersRef.current[letterIndex++] = el;
-                  }}
-                  className={`${className} inline-block`}
-                >
-                  &nbsp;
-                </span> 
-              </span>
-            }
-          )}
+                return <span key={wordIndex} className="mr-[0.3rem]">
+                  {word.split("").map((letter, letterIdx) => {
+                    const refCallback = (el: HTMLSpanElement | null) => {
+                      if (el) lettersRef.current[letterIndex++] = el;
+                    };
+                    return (
+                      <span
+                        key={letterIdx}
+                        ref={refCallback}
+                        className={`${className}`}
+                      >
+                        {letter}
+                      </span>
+                    );
+                  })}
+                  <span
+                    ref={(el) => {
+                      if (el) lettersRef.current[letterIndex++] = el;
+                    }}
+                    className={`${className} inline-block`}
+                  >
+                    &nbsp;
+                  </span> 
+                </span>
+              }
+            )}
             </h2>
+          </div>
         </div>
       </div>
     </section>

@@ -49,9 +49,9 @@ export default function AboutmeIAm() {
   }, [aboutMe,data.language]);
 
   return (
-    <section className="w-[100%]" style={{ fontFamily: aboutMeFont }}>
-      <div className={`flex flex-col items-center m-auto ${Styles.container}`}>
-        <h2 className={`${Styles.titleFont}`} >{aboutMe.myName}</h2>
+    <section className="w-[100%] bg-[linear-gradient(to_bottom,_rgba(242,242,255,0)_0%,_#f2f2ff_2%,_#f2f2ff_90%,_rgba(242,242,255,0)_100%)] pt-[0.5vh] pb-[10vh] -mt-[0.5vh] -mb-[10vh]" style={{ fontFamily: aboutMeFont }}>
+      <div className={`flex flex-col items-center m-auto ${Styles.container} ${Styles.paperBG}`}>
+        <h2 className={`mb-[1.5rem] ${Styles.titleFont}`} >{aboutMe.myName}</h2>
         <h2 className="mx-[1rem]">
           {aboutMe.selfIntroduction.map((word,wordIndex)=>{
               const wordType = aboutMe.selfIntroductionStringType[wordIndex]
