@@ -11,7 +11,7 @@ export default function Skills() {
   return (
     <section className="w-[100%]">
       <div className={`flex flex-col items-center text-center m-auto ${Styles.container}`}>
-        <h2 className={`${Styles.titleFont}`} style={{ fontFamily: "var(--font-caveat), cursive" }}>{aboutMe.aboutTitles[0]}</h2>
+        <h2 className={`${Styles.titleFont}`}>{aboutMe.aboutTitles[0]}</h2>
 
         <SkillLists aboutMe={aboutMe}/>
       </div>
