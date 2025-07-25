@@ -41,7 +41,7 @@ export default function SkillLists({aboutMe,detailSkills}:SkillListsProps) {
             })}
           </p>
     
-          <div className="flex w-[100%]">
+          <div className={`flex w-[100%] ${Styles.imageLayout}`}>
             {item.skillList.map((image,imageIndex)=>{
               return <Image
               key={`img_${imageIndex}`}
