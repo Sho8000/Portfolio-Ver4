@@ -4,6 +4,12 @@ import emailImg from "@/../public/FooterImages/Email.png"
 import linkedInImg from "@/../public/FooterImages/LinkedIn.png"
 import instagramImg from "@/../public/FooterImages/instagramLogo.png"
 /* Project Images */
+import SalesPMPC from "@/../public/ProjectImages/SalesPMPC.png"
+import SalesPMPCHover from "@/../public/ProjectImages/SalesPMPCHover.png"
+import SalesPMPCFull from "@/../public/ProjectImages/SalesPMPCFull.png"
+import SalesPMPhone from "@/../public/ProjectImages/SalesPMPhone.png"
+import SalesPMPhoneHover from "@/../public/ProjectImages/SalesPMPhoneHover.png"
+import SalesPMPCFullHover from "@/../public/ProjectImages/SalesPMPCFullHover.png"
 import AkifPC from "@/../public/ProjectImages/AkifPC.png"
 import AkifPCHover from "@/../public/ProjectImages/AkifPCHover.png"
 import AkifPCFull from "@/../public/ProjectImages/AkifPCFull.png"
@@ -333,6 +339,49 @@ export const MainDBEng:MainDBEntry[] = [
       clientProjects:{
         projectTypeName:"Client Projects",
         projects:[
+          {
+            projectName:"Sales-PM",
+            projectType:"Prospects management system",
+            myRole:"Full-Stack Engineer",
+            technologies:[
+              {
+                skillName:"Next.js",
+                skillImage:NextJSImg,
+              },
+              {
+                skillName:"Zustand",
+                skillImage:ZustandImg,
+              },
+              {
+                skillName:"Tailwind CSS",
+                skillImage:TailwindImg,
+              },
+              {
+                skillName:"NextAuth",
+                skillImage:NextAuthImg,
+              },
+              {
+                skillName:"Prisma",
+                skillImage:PrismaImg,
+              },
+              {
+                skillName:"MongoDB",
+                skillImage:MongoDBImg,
+              },
+              {
+                skillName:"Vercel",
+                skillImage:VercelImg,
+              },
+            ],
+            detail:"This is a application for sales people who are looking for prospects. The users can manage how urgent and what kind of topics their clients looking for. I built this app from design with Figma for my client, and all REST APIs and pages, also created Logo. If you are interested in this app, I can create your trial account.",
+            imagePC:SalesPMPC,
+            imagePCFull:SalesPMPCFull,
+            imagePCHover:SalesPMPCHover,
+            imagePCFullHover:SalesPMPCFullHover,
+            imagePhone:SalesPMPhone,
+            imagePhoneHover:SalesPMPhoneHover,
+            url:"https://sales-pm.vercel.app/",
+          },
           {
             projectName:"VanCastro Driving School",
             projectType:"Booking management system",
